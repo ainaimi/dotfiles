@@ -137,3 +137,5 @@ function mkcd() {
    mkdir -p "$@" && cd "$_";
 }
 
+# SYNTAX HIGHLIGHTING FOR MAN PAGES USING BAT
+export MANPAGER="sh -c 'col -bx | bat -l man -p'"
