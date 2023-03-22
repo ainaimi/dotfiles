@@ -133,7 +133,9 @@ unset __conda_setup
 export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"
 
 # ADD CUSTOM LS ALIAS
-alias ls='ls -lAFh'
+#alias ls='ls -lAFh'
+alias ls='exa -laFh --git'
+alias exa="exa -laFh --git"
 
 # ADD NEW MKDIR FUNCTION
 function mkcd() {
