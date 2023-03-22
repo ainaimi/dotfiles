@@ -11,3 +11,4 @@ learning how to use dotfiles.
 - Trackpad (three finger drag, tap to click)
 - .zshrc
 - Git (config and SSH)
+- Homebrew Install
