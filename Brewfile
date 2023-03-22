@@ -1,0 +1,35 @@
+# Taps
+tap "homebrew/bundle"
+tap "homebrew/cask"
+tap "homebrew/core"
+
+# Brews
+brew "bat"
+# brew "libpng"
+# brew "python@3.9"
+# brew "cmake"
+# brew "gcc"
+# brew "git"
+brew "httpie"
+# brew "lapack"
+# brew "libomp", link: true
+# brew "mas"
+# brew "node"
+# brew "openblas"
+# brew "openjdk"
+brew "exa"
+
+# Cask
+cask "alfred"
+cask "dropbox"
+# cask "bartender"
+# cask "docker"
+# cask "gimp"
+# cask "istat-menus"
+# cask "iterm2"
+# cask "keycastr"
+# cask "mactex"
+# cask "miniforge"
+# cask "miro"
+# cask "obsidian"
+# cask "texmaker"
