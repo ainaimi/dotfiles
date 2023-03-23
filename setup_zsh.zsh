@@ -17,6 +17,13 @@ else
     chsh -s '/opt/homebrew/bin/zsh'
 fi
 
-echo "Enter user password to symlink sh to zsh"
-# this didn't work the way we wanted to so reverted back.
-sudo ln -sfv /bin/zsh /private/var/select/sh
+if sh --version | grep -q zsh; then
+    echo '/bin/zsh already linked to /private/var/select/sh'
+else
+    echo "Enter user password to symlink sh to zsh"
+    # this didn't work the way we wanted to so reverted back.
+    sudo ln -sfv /bin/zsh /private/var/select/sh
+
+    # we tried to get this to work, but wouldn't symlink
+    # sudo ln -sfv /opt/homebrew/bin/zsh /private/var/select/sh
+fi
