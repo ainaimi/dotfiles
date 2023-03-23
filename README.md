@@ -12,3 +12,14 @@ learning how to use dotfiles.
 - ~~.zshrc~~
 - ~~Git (config and SSH)~~
 - ~~Homebrew Install~~
+
+## General ToDo
+- Uninstall unwanted applications shipped with macOS
+- Setup macOS options (e.g., ttps://github.com/mathiasbynens/dotfiles/blob/main/.macos)
+- Install apps via brew
+    - use brewfile
+    
+
+## NOTES
+
+- Use brew install watchman to avoid macOS GateKeeper: https://superuser.com/questions/1635602/how-to-disable-quarantine-completely-in-macos
