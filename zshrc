@@ -138,6 +138,7 @@ export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"
 #alias ls='ls -lAFh'
 alias ls='exa -laFh --git'
 alias exa="exa -laFh --git"
+alias bbd="brew bundle dump --force --describe"
 
 # ADD NEW MKDIR FUNCTION
 function mkcd() {
