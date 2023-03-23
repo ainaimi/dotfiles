@@ -9,6 +9,7 @@ fi
 
 # Set Variables
 export HOMEBREW_CASK_OPTS="--no_quarantine"
+export NULLCMD=bat
 
 # If you come from bash you might have to change your $PATH.
 export PATH=$HOME/bin:/usr/local/bin:$PATH
