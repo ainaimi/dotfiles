@@ -57,6 +57,10 @@ cask "miniforge"
 cask "miro"
 # Knowledge base that works on top of a local folder of plain text Markdown files
 cask "obsidian"
+# Environment for statistical computing and graphics
+cask "r"
+# Data science software focusing on R and Python
+cask "rstudio"
 mas "Brother iPrint&Scan", id: 1193539993
 mas "Calculator Plus", id: 1181465428
 mas "Fantastical", id: 975937182
