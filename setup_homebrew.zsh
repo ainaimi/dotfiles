@@ -9,13 +9,10 @@ else
     /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 fi
 
-# ## formulae
-# brew install httpie
-# brew install bat
-
-# ## casks 
-# brew install --no-quarantine --cask google-chrome
-# brew install --no-quarantine --cask visual-studio-code
-# brew install --no-quarantine --cask alfred
+# TODO: keep watch for different '--no-quarantine' solution.
+# Currently, there is no '--no-quarantine' optioin for brew bundle
+# It's in zshrc:
+# export HOMEBREW_CASK_OPTS="--no-quarantine"
+# https://github.com/Homebrew/homebrew-bundle/issues/474
 
 brew bundle --verbose
