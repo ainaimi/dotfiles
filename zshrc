@@ -144,3 +144,9 @@ function mkcd() {
 
 # SYNTAX HIGHLIGHTING FOR MAN PAGES USING BAT
 export MANPAGER="sh -c 'col -bx | bat -l man -p'"
+
+
+# exist function
+function exists(){
+    command -v $1 >/dev/null 2>&1
+}
