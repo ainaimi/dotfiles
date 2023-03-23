@@ -21,6 +21,8 @@ brew "git"
 brew "httpie"
 # Linear Algebra PACKage
 brew "lapack"
+# Pager program similar to more
+brew "less"
 # LLVM's OpenMP runtime library
 brew "libomp", link: true
 # Mac App Store command-line interface
