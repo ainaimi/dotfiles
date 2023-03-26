@@ -17,14 +17,14 @@ fi
 
 #### not clear on my use case for this yet. doing to follow along in course...
 
-npm install --global firebase-tools
-npm install --global @angular/cli
-npm install --global @ionic/cli
+# npm uninstall --global firebase-tools
+# npm uninstall --global @angular/cli
+# npm uninstall --global @ionic/cli
 
-npm install --global typescript
-npm install --global json-server
-npm install --global http-server
-npm install --global trash-cli
+# npm uninstall --global typescript
+# npm uninstall --global json-server
+# npm uninstall --global http-server
+npm install --location=global trash-cli
 
 echo "Global NPM Packages Installed:"
 npm list --global --depth=0
