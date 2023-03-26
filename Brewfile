@@ -35,6 +35,8 @@ brew "openblas"
 brew "openjdk"
 # Watch files and take action when they change
 brew "watchman"
+# JavaScript package manager
+brew "yarn"
 # UNIX shell (command interpreter)
 brew "zsh"
 # Application launcher and productivity software
