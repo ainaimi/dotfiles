@@ -13,6 +13,7 @@ export NULLCMD=bat
 export N_PREFIX="$HOME/.n" # we want this n folder to match the hidden, so dotfile it
 export PREFIX="$N_PREFIX" #do we really need this?
 
+## PATH RELATED ITEMS
 # If you come from bash you might have to change your $PATH.
 export PATH=$HOME/bin:/usr/local/bin:$PATH
 export PATH=/opt/R/arm64/bin:$PATH
@@ -20,7 +21,7 @@ export PATH="$PATH:$N_PREFIX/bin"
 
 
 # Path to your oh-my-zsh installation.
-export ZSH="/Users/ain/.oh-my-zsh"
+export ZSH="/Users/ain/.oh-my-zsh" # for some reason, can't replace `/Users/ain/` with `~`
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
