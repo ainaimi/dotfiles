@@ -10,10 +10,13 @@ fi
 # Set Variables
 export HOMEBREW_CASK_OPTS="--no_quarantine"
 export NULLCMD=bat
+export N_PREFIX="$HOME/.n" # we want this n folder to match the hidden, so dotfile it
+export PREFIX="$N_PREFIX" #do we really need this?
 
 # If you come from bash you might have to change your $PATH.
 export PATH=$HOME/bin:/usr/local/bin:$PATH
 export PATH=/opt/R/arm64/bin:$PATH
+export PATH="$PATH:$N_PREFIX/bin"
 
 
 # Path to your oh-my-zsh installation.
