@@ -1,4 +1,4 @@
-echo "Hello from .zshenv"
+echo "running the .zshenv file"
 
 # exist function
 function exists(){
