@@ -27,8 +27,8 @@ brew "less"
 brew "libomp", link: true
 # Mac App Store command-line interface
 brew "mas"
-# Platform built on V8 to build network applications
-brew "node"
+# Node version management
+brew "n"
 # Optimized BLAS library
 brew "openblas"
 # Development kit for the Java programming language
