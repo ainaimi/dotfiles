@@ -14,9 +14,9 @@
     ~/.config/rstudio:
         create: true
         path: config/rstudio
-    # ~/.config/oh-my-zsh:
-    #     create: true
-    #     path: config/oh-my-zsh
+    ~/.config/oh-my-zsh:
+        create: true
+        path: config/oh-my-zsh
 
 - create:
     - ~/Work

@@ -21,7 +21,7 @@ export PATH="$PATH:$N_PREFIX/bin"
 
 
 # Path to your oh-my-zsh installation.
-export ZSH="/Users/ain/.oh-my-zsh" # for some reason, can't replace `/Users/ain/` with `~`
+export ZSH="/Users/ain/.config/oh-my-zsh" # for some reason, can't replace `/Users/ain/` with `~`
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
