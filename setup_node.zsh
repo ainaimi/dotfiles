@@ -27,4 +27,4 @@ fi
 npm install --location=global trash-cli
 
 echo "Global NPM Packages Installed:"
-npm list --global --depth=0
+npm list --location=global --depth=0
