@@ -1,11 +1,15 @@
 echo "Hello from .zshrc"
 
+typeset -g POWERLEVEL9K_INSTANT_PROMPT=quiet
+
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
 if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
+
+source ~/powerlevel10k/powerlevel10k.zsh-theme
 
 # Set Variables
 export HOMEBREW_CASK_OPTS="--no_quarantine"
@@ -89,7 +93,9 @@ zstyle ':omz:update' mode reminder  # just remind me to update when it's time
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(zsh-autosuggestions)
+plugins=(
+    zsh-autosuggestions
+    )
 
 source $ZSH/oh-my-zsh.sh
 
@@ -154,5 +160,3 @@ function mkcd() {
 
 # SYNTAX HIGHLIGHTING FOR MAN PAGES USING BAT
 export MANPAGER="sh -c 'col -bx | bat -l man -p'"
-
-
