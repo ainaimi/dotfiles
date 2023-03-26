@@ -144,6 +144,7 @@ alias ls='exa -laFh --git'
 alias exa="exa -laFh --git"
 alias bbd="brew bundle dump --force --describe"
 alias trail='<<<${(F)path}' # single quotes matter here!!
+alias rm=trash
 
 # ADD NEW MKDIR FUNCTION
 function mkcd() {
