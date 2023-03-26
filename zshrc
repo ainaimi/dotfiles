@@ -1,4 +1,4 @@
-echo "Hello from .zshrc"
+echo "running the .zshrc file"
 
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
@@ -45,19 +45,24 @@ export PREFIX="$N_PREFIX" #do we really need this?
 
 ## PATH RELATED ITEMS
 # If you come from bash you might have to change your $PATH.
-export PATH=$HOME/bin:/usr/local/bin:$PATH
-export PATH=/opt/R/arm64/bin:$PATH
-export PATH="$PATH:$N_PREFIX/bin"
+# export PATH=$HOME/bin:/usr/local/bin:$PATH
+# export PATH=/opt/R/arm64/bin:$PATH
+# export PATH="$PATH:$N_PREFIX/bin"
 
-# User configuration
+typeset -U path
 
-# ADD CUSTOM LS ALIAS
-#alias ls='ls -lAFh'
+path=(
+  $path
+  "/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
+  "$N_PREFIX/bin"
+)
+
+# USER CONFIGURATIONS
 alias ls='exa -laFh --git'
 alias exa="exa -laFh --git"
 alias bbd="brew bundle dump --force --describe"
 alias trail='<<<${(F)path}' # single quotes matter here!!
-alias rm=trash
+alias rm=trash # don't forget that you did this: changing rm default behavior
 
 # ADD NEW MKDIR FUNCTION
 function mkcd() {
