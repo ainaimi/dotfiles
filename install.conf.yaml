@@ -11,6 +11,9 @@
     ~/.config/bat:
         create: true
         path: config/bat
+    ~/.config/rstudio:
+        create: true
+        path: config/rstudio
 
 - create:
     - ~/Work
