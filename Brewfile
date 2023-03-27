@@ -19,6 +19,8 @@ brew "gcc"
 brew "git"
 # User-friendly cURL replacement (command-line HTTP client)
 brew "httpie"
+# Lightweight and flexible command-line JSON processor
+brew "jq"
 # Linear Algebra PACKage
 brew "lapack"
 # Pager program similar to more
