@@ -32,6 +32,9 @@ plugins=(
     zsh-autosuggestions
     )
 
+
+export ZSH_COMPDUMP=$ZSH/cache/.zcompdump-$HOST 
+# above taken from: https://bit.ly/3npcXId
 source $ZSH/oh-my-zsh.sh
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
