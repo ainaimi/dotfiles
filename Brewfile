@@ -69,13 +69,5 @@ cask "obsidian"
 cask "r"
 # Data science software focusing on R and Python
 cask "rstudio"
-mas "Brother iPrint&Scan", id: 1193539993
-mas "Calculator Plus", id: 1181465428
-mas "Fantastical", id: 975937182
-mas "HP Smart", id: 1474276998
-mas "Magnet", id: 441258766
-mas "PDF Expert", id: 1055273043
-mas "Slack", id: 803453959
-mas "Todoist", id: 585829637
-mas "WhatsApp", id: 1147396723
-mas "Xcode", id: 497799835
+# Team communication and collaboration software
+cask "slack"
