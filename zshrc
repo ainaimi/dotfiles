@@ -73,4 +73,4 @@ function mkcd() {
 }
 
 # SYNTAX HIGHLIGHTING FOR MAN PAGES USING BAT
-export MANPAGER="sh -c 'col -bx | bat -l man -p'"
+export MANPAGER="sh -c 'col -bx | bat -l man -p'"source ~/powerlevel10k/powerlevel10k.zsh-theme
