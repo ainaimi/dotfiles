@@ -7,8 +7,6 @@ brew "bat"
 brew "bat-extras"
 # Library for manipulating PNG images
 brew "libpng"
-# Interpreted, interactive, object-oriented programming language
-brew "python@3.9"
 # Cross-platform make
 brew "cmake"
 # Modern replacement for 'ls'
@@ -35,18 +33,28 @@ brew "n"
 brew "openblas"
 # Development kit for the Java programming language
 brew "openjdk"
+# Interpreted, interactive, object-oriented programming language
+brew "python@3.9"
 # Watch files and take action when they change
 brew "watchman"
 # JavaScript package manager
 brew "yarn"
 # UNIX shell (command interpreter)
 brew "zsh"
+# Password manager that keeps all passwords secure behind one password
+cask "1password"
+# View, print, and comment on PDF documents
+cask "adobe-acrobat-reader"
 # Application launcher and productivity software
 cask "alfred"
 # Menu bar icon organizer
 cask "bartender"
 # App to build and share containerized applications and microservices
 cask "docker"
+# Client for the Dropbox cloud storage service
+cask "dropbox"
+# Web browser
+cask "firefox"
 # Free and open-source image editor
 cask "gimp"
 # Git client focusing on productivity
@@ -63,6 +71,8 @@ cask "mactex"
 cask "miniforge"
 # Online collaborative whiteboard platform
 cask "miro"
+# App to write, plan, collaborate, and get organized
+cask "notion"
 # Knowledge base that works on top of a local folder of plain text Markdown files
 cask "obsidian"
 # Environment for statistical computing and graphics
@@ -71,3 +81,20 @@ cask "r"
 cask "rstudio"
 # Team communication and collaboration software
 cask "slack"
+# Music streaming service
+cask "spotify"
+# Open-source code editor
+cask "visual-studio-code"
+# Video communication and virtual meeting platform
+cask "zoom"
+mas "Fantastical", id: 975937182
+mas "GarageBand", id: 682658836
+mas "iMovie", id: 408981434
+mas "Keynote", id: 409183694
+mas "Magnet", id: 441258766
+mas "Numbers", id: 409203825
+mas "Pages", id: 409201541
+mas "PDF Expert", id: 1055273043
+mas "Todoist", id: 585829637
+mas "WhatsApp", id: 1147396723
+mas "Xcode", id: 497799835
