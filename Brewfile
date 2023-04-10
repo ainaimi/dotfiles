@@ -15,6 +15,8 @@ brew "exa"
 brew "gcc"
 # Distributed revision control system
 brew "git"
+# Multi-platform library for OpenGL applications
+brew "glfw"
 # User-friendly cURL replacement (command-line HTTP client)
 brew "httpie"
 # Lightweight and flexible command-line JSON processor
