@@ -1,24 +1,32 @@
 tap "homebrew/bundle"
 tap "homebrew/cask"
 tap "homebrew/core"
+# Tool for generating GNU Standards-compliant Makefiles
+brew "automake"
 # Clone of cat(1) with syntax highlighting and Git integration
 brew "bat"
 # Bash scripts that integrate bat with various command-line tools
 brew "bat-extras"
+# Parser generator
+brew "bison"
 # Library for manipulating PNG images
 brew "libpng"
-# Ruby environment tool
-brew "chruby"
 # Cross-platform make
 brew "cmake"
+# Cryptography and SSL/TLS Toolkit
+brew "openssl@1.1"
 # Modern replacement for 'ls'
 brew "exa"
 # GNU compiler collection
 brew "gcc"
+# GNU database manager
+brew "gdbm"
 # Distributed revision control system
 brew "git"
 # Multi-platform library for OpenGL applications
 brew "glfw"
+# Library for command-line editing
+brew "readline"
 # User-friendly cURL replacement (command-line HTTP client)
 brew "httpie"
 # Lightweight and flexible command-line JSON processor
@@ -27,8 +35,12 @@ brew "jq"
 brew "lapack"
 # Pager program similar to more
 brew "less"
+# Portable Foreign Function Interface library
+brew "libffi"
 # LLVM's OpenMP runtime library
 brew "libomp", link: true
+# YAML Parser
+brew "libyaml"
 # Mac App Store command-line interface
 brew "mas"
 # Node version management
@@ -39,8 +51,6 @@ brew "openblas"
 brew "openjdk"
 # Interpreted, interactive, object-oriented programming language
 brew "python@3.9"
-# Install Ruby, JRuby, Rubinius, TruffleRuby, or mruby
-brew "ruby-install"
 # Watch files and take action when they change
 brew "watchman"
 # JavaScript package manager
