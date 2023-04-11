@@ -32,7 +32,6 @@ plugins=(
     zsh-autosuggestions
     )
 
-
 export ZSH_COMPDUMP=$ZSH/cache/.zcompdump-$HOST 
 # above taken from: https://bit.ly/3npcXId
 source $ZSH/oh-my-zsh.sh
@@ -74,3 +73,14 @@ function mkcd() {
 
 # SYNTAX HIGHLIGHTING FOR MAN PAGES USING BAT
 export MANPAGER="sh -c 'col -bx | bat -l man -p'"source ~/powerlevel10k/powerlevel10k.zsh-theme
+export PATH="$HOME/rubyonmac:$PATH"
+
+source /opt/homebrew/opt/chruby/share/chruby/chruby.sh
+
+source /opt/homebrew/opt/chruby/share/chruby/auto.sh
+
+chruby ruby-
+
+eval "$(nodenv init -)"
+
+nodenv global 16.19.0
