@@ -7,6 +7,8 @@ brew "bat"
 brew "bat-extras"
 # Library for manipulating PNG images
 brew "libpng"
+# Ruby environment tool
+brew "chruby"
 # Cross-platform make
 brew "cmake"
 # Modern replacement for 'ls'
@@ -37,6 +39,8 @@ brew "openblas"
 brew "openjdk"
 # Interpreted, interactive, object-oriented programming language
 brew "python@3.9"
+# Install Ruby, JRuby, Rubinius, TruffleRuby, or mruby
+brew "ruby-install"
 # Watch files and take action when they change
 brew "watchman"
 # JavaScript package manager
