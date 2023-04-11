@@ -1,6 +1,8 @@
+tap "heroku/brew"
 tap "homebrew/bundle"
 tap "homebrew/cask"
 tap "homebrew/core"
+tap "homebrew/services"
 # Tool for generating GNU Standards-compliant Makefiles
 brew "automake"
 # Clone of cat(1) with syntax highlighting and Git integration
@@ -11,6 +13,8 @@ brew "bat-extras"
 brew "bison"
 # Library for manipulating PNG images
 brew "libpng"
+# Ruby environment tool
+brew "chruby"
 # Cross-platform make
 brew "cmake"
 # Cryptography and SSL/TLS Toolkit
@@ -21,6 +25,8 @@ brew "exa"
 brew "gcc"
 # GNU database manager
 brew "gdbm"
+# GitHub command-line tool
+brew "gh"
 # Distributed revision control system
 brew "git"
 # Multi-platform library for OpenGL applications
@@ -43,20 +49,36 @@ brew "libomp", link: true
 brew "libyaml"
 # Mac App Store command-line interface
 brew "mas"
+# Open source relational database management system
+brew "mysql"
 # Node version management
 brew "n"
+# Cryptography and SSL/TLS Toolkit
+brew "openssl@3"
+# Manage multiple NodeJS versions
+brew "nodenv"
 # Optimized BLAS library
 brew "openblas"
 # Development kit for the Java programming language
 brew "openjdk"
+# Object-relational database system
+brew "postgresql@14"
 # Interpreted, interactive, object-oriented programming language
 brew "python@3.9"
+# Persistent key-value database, with built-in net interface
+brew "redis"
+# Install Ruby, JRuby, Rubinius, TruffleRuby, or mruby
+brew "ruby-install"
+# Safe, concurrent, practical language
+brew "rust"
 # Watch files and take action when they change
 brew "watchman"
 # JavaScript package manager
 brew "yarn"
 # UNIX shell (command interpreter)
 brew "zsh"
+# Everything you need to get started with Heroku
+brew "heroku/brew/heroku"
 # Password manager that keeps all passwords secure behind one password
 cask "1password"
 # View, print, and comment on PDF documents
@@ -103,13 +125,8 @@ cask "spotify"
 cask "visual-studio-code"
 # Video communication and virtual meeting platform
 cask "zoom"
-mas "Fantastical", id: 975937182
-mas "GarageBand", id: 682658836
-mas "iMovie", id: 408981434
-mas "Keynote", id: 409183694
+mas "Fantastical", id: 9759371824
 mas "Magnet", id: 441258766
-mas "Numbers", id: 409203825
-mas "Pages", id: 409201541
 mas "PDF Expert", id: 1055273043
 mas "Todoist", id: 585829637
 mas "WhatsApp", id: 1147396723
