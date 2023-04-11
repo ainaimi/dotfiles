@@ -74,3 +74,6 @@ function mkcd() {
 
 # SYNTAX HIGHLIGHTING FOR MAN PAGES USING BAT
 export MANPAGER="sh -c 'col -bx | bat -l man -p'"source ~/powerlevel10k/powerlevel10k.zsh-theme
+
+## enable auto-switching of Rubies specified by .ruby-version files
+source /opt/homebrew/opt/chruby/share/chruby/auto.sh
