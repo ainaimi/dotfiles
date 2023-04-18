@@ -125,8 +125,13 @@ cask "spotify"
 cask "visual-studio-code"
 # Video communication and virtual meeting platform
 cask "zoom"
-mas "Fantastical", id: 9759371824
+mas "Fantastical", id: 975937182
+mas "GarageBand", id: 682658836
+mas "iMovie", id: 408981434
+mas "Keynote", id: 409183694
 mas "Magnet", id: 441258766
+mas "Numbers", id: 409203825
+mas "Pages", id: 409201541
 mas "PDF Expert", id: 1055273043
 mas "Todoist", id: 585829637
 mas "WhatsApp", id: 1147396723
