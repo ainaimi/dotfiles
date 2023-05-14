@@ -50,7 +50,7 @@ brew "libyaml"
 # Mac App Store command-line interface
 brew "mas"
 # Open source relational database management system
-brew "mysql"
+brew "mysql", restart_service: true
 # Node version management
 brew "n"
 # Cryptography and SSL/TLS Toolkit
@@ -121,6 +121,8 @@ cask "rstudio"
 cask "slack"
 # Music streaming service
 cask "spotify"
+# Video game digital distribution service
+cask "steam"
 # Open-source code editor
 cask "visual-studio-code"
 # Video communication and virtual meeting platform

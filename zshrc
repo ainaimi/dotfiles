@@ -45,6 +45,10 @@ export NULLCMD=bat
 export N_PREFIX="$HOME/.n" # we want this n folder to match the hidden, so dotfile it
 export PREFIX="$N_PREFIX" #do we really need this?
 
+# so that R can find the libcomp library
+export LDFLAGS="-L/opt/homebrew/opt/libomp/lib"
+export CPPFLAGS="-I/opt/homebrew/opt/libomp/include"
+
 ## PATH RELATED ITEMS
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
