@@ -97,6 +97,8 @@ cask "firefox"
 cask "gimp"
 # Git client focusing on productivity
 cask "gitkraken"
+# Web browser
+cask "google-chrome"
 # System monitoring app
 cask "istat-menus"
 # Terminal emulator as alternative to Apple's Terminal app
