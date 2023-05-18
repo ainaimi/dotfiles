@@ -117,6 +117,8 @@ cask "notion"
 cask "obsidian"
 # Environment for statistical computing and graphics
 cask "r"
+# All-in-one bookmark manager
+cask "raindropio"
 # Data science software focusing on R and Python
 cask "rstudio"
 # Team communication and collaboration software
