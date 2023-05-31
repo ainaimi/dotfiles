@@ -17,6 +17,8 @@ brew "libpng"
 brew "chruby"
 # Cross-platform make
 brew "cmake"
+# Console Matrix
+brew "cmatrix"
 # Cryptography and SSL/TLS Toolkit
 brew "openssl@1.1"
 # Modern replacement for 'ls'
@@ -142,3 +144,13 @@ mas "PDF Expert", id: 1055273043
 mas "Todoist", id: 585829637
 mas "WhatsApp", id: 1147396723
 mas "Xcode", id: 497799835
+vscode "ms-azuretools.vscode-docker"
+vscode "ms-python.python"
+vscode "ms-python.vscode-pylance"
+vscode "ms-toolsai.jupyter"
+vscode "ms-toolsai.jupyter-keymap"
+vscode "ms-toolsai.jupyter-renderers"
+vscode "ms-toolsai.vscode-jupyter-cell-tags"
+vscode "ms-toolsai.vscode-jupyter-slideshow"
+vscode "ms-vscode-remote.remote-containers"
+vscode "yzane.markdown-pdf"
