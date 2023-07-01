@@ -64,7 +64,7 @@ path=(
 )
 
 # USER CONFIGURATIONS
-alias ls='exa -laFh --git'
+#alias ls='exa -laFh --git'
 alias exa="exa -laFh --git"
 alias bbd="brew bundle dump --force --describe"
 alias trail='<<<${(F)path}' # single quotes matter here!!
@@ -81,7 +81,6 @@ export MANPAGER="sh -c 'col -bx | bat -l man -p'"
 export PATH="$HOME/rubyonmac:$PATH"
 
 source /opt/homebrew/opt/chruby/share/chruby/chruby.sh
-
 source /opt/homebrew/opt/chruby/share/chruby/auto.sh
 
 chruby ruby-
