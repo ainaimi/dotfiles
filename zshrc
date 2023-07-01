@@ -7,7 +7,7 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
-source ~/powerlevel10k/powerlevel10k.zsh-theme
+# source /Users/ain/dotfiles/config/oh-my-zsh/custom/themes/powerlevel10k/powerlevel10k.zsh-theme
 
 # Path to your oh-my-zsh installation.
 export ZSH="/Users/ain/.config/oh-my-zsh" # for some reason, can't replace `/Users/ain/` with `~`
@@ -76,7 +76,8 @@ function mkcd() {
 }
 
 # SYNTAX HIGHLIGHTING FOR MAN PAGES USING BAT
-export MANPAGER="sh -c 'col -bx | bat -l man -p'"source ~/powerlevel10k/powerlevel10k.zsh-theme
+export MANPAGER="sh -c 'col -bx | bat -l man -p'"
+#source ~/.config/oh-my-zsh/themes/powerlevel10k/powerlevel10k.zsh-theme
 export PATH="$HOME/rubyonmac:$PATH"
 
 source /opt/homebrew/opt/chruby/share/chruby/chruby.sh
