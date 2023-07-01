@@ -20,6 +20,8 @@ brew "cmake"
 # Console Matrix
 brew "cmatrix"
 # Cryptography and SSL/TLS Toolkit
+brew "openssl@3"
+# Cryptography and SSL/TLS Toolkit
 brew "openssl@1.1"
 # Modern replacement for 'ls'
 brew "exa"
@@ -55,8 +57,6 @@ brew "mas"
 brew "mysql", restart_service: true
 # Node version management
 brew "n"
-# Cryptography and SSL/TLS Toolkit
-brew "openssl@3"
 # Manage multiple NodeJS versions
 brew "nodenv"
 # Optimized BLAS library
@@ -144,6 +144,8 @@ mas "PDF Expert", id: 1055273043
 mas "Todoist", id: 585829637
 mas "WhatsApp", id: 1147396723
 mas "Xcode", id: 497799835
+vscode "James-Yu.latex-workshop"
+vscode "mathematic.vscode-latex"
 vscode "ms-azuretools.vscode-docker"
 vscode "ms-python.python"
 vscode "ms-python.vscode-pylance"
