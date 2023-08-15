@@ -19,6 +19,8 @@ brew "chruby"
 brew "cmake"
 # Console Matrix
 brew "cmatrix"
+# Message bus system, providing inter-application communication
+brew "dbus"
 # Cryptography and SSL/TLS Toolkit
 brew "openssl@3"
 # Cryptography and SSL/TLS Toolkit
@@ -47,6 +49,10 @@ brew "lapack"
 brew "less"
 # Portable Foreign Function Interface library
 brew "libffi"
+# Implementation of the file(1) command
+brew "libmagic"
+# Implementation of the Double Ratchet cryptographic ratchet
+brew "libolm"
 # LLVM's OpenMP runtime library
 brew "libomp", link: true
 # YAML Parser
