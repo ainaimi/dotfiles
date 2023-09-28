@@ -1,7 +1,5 @@
 tap "heroku/brew"
 tap "homebrew/bundle"
-tap "homebrew/cask"
-tap "homebrew/core"
 tap "homebrew/services"
 # Tool for generating GNU Standards-compliant Makefiles
 brew "automake"
@@ -23,8 +21,6 @@ brew "cmatrix"
 brew "dbus"
 # Cryptography and SSL/TLS Toolkit
 brew "openssl@3"
-# Cryptography and SSL/TLS Toolkit
-brew "openssl@1.1"
 # Modern replacement for 'ls'
 brew "exa"
 # GNU compiler collection
@@ -69,6 +65,8 @@ brew "nodenv"
 brew "openblas"
 # Development kit for the Java programming language
 brew "openjdk"
+# Cryptography and SSL/TLS Toolkit
+brew "openssl@1.1"
 # Object-relational database system
 brew "postgresql@14"
 # Interpreted, interactive, object-oriented programming language
@@ -161,4 +159,6 @@ vscode "ms-toolsai.jupyter-renderers"
 vscode "ms-toolsai.vscode-jupyter-cell-tags"
 vscode "ms-toolsai.vscode-jupyter-slideshow"
 vscode "ms-vscode-remote.remote-containers"
+vscode "ms-vsliveshare.vsliveshare"
+vscode "REditorSupport.r"
 vscode "yzane.markdown-pdf"
