@@ -3,6 +3,8 @@ tap "homebrew/bundle"
 tap "homebrew/services"
 # Tool for generating GNU Standards-compliant Makefiles
 brew "automake"
+# Cryptography and SSL/TLS Toolkit
+brew "openssl@3"
 # Clone of cat(1) with syntax highlighting and Git integration
 brew "bat"
 # Bash scripts that integrate bat with various command-line tools
@@ -19,8 +21,6 @@ brew "cmake"
 brew "cmatrix"
 # Message bus system, providing inter-application communication
 brew "dbus"
-# Cryptography and SSL/TLS Toolkit
-brew "openssl@3"
 # Modern replacement for 'ls'
 brew "exa"
 # GNU compiler collection
@@ -93,6 +93,8 @@ cask "adobe-acrobat-reader"
 cask "alfred"
 # Menu bar icon organizer
 cask "bartender"
+# Voice and text chat software
+cask "discord"
 # App to build and share containerized applications and microservices
 cask "docker"
 # Client for the Dropbox cloud storage service
