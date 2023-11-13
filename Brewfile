@@ -1,6 +1,8 @@
 tap "heroku/brew"
 tap "homebrew/bundle"
 tap "homebrew/services"
+# Library for manipulating PNG images
+brew "libpng"
 # Tool for generating GNU Standards-compliant Makefiles
 brew "automake"
 # Cryptography and SSL/TLS Toolkit
@@ -11,8 +13,6 @@ brew "bat"
 brew "bat-extras"
 # Parser generator
 brew "bison"
-# Library for manipulating PNG images
-brew "libpng"
 # Ruby environment tool
 brew "chruby"
 # Cross-platform make
@@ -37,6 +37,10 @@ brew "glfw"
 brew "readline"
 # User-friendly cURL replacement (command-line HTTP client)
 brew "httpie"
+# LLVM's OpenMP runtime library
+brew "libomp", link: true
+# Tools and libraries to manipulate images in many formats
+brew "imagemagick"
 # Lightweight and flexible command-line JSON processor
 brew "jq"
 # Linear Algebra PACKage
@@ -49,8 +53,6 @@ brew "libffi"
 brew "libmagic"
 # Implementation of the Double Ratchet cryptographic ratchet
 brew "libolm"
-# LLVM's OpenMP runtime library
-brew "libomp", link: true
 # YAML Parser
 brew "libyaml"
 # Mac App Store command-line interface
@@ -151,6 +153,7 @@ mas "Todoist", id: 585829637
 mas "WhatsApp", id: 1147396723
 mas "Xcode", id: 497799835
 vscode "James-Yu.latex-workshop"
+vscode "maltehei.latex-citations"
 vscode "mathematic.vscode-latex"
 vscode "ms-azuretools.vscode-docker"
 vscode "ms-python.python"
