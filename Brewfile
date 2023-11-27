@@ -1,5 +1,7 @@
 tap "heroku/brew"
 tap "homebrew/bundle"
+tap "homebrew/cask"
+tap "homebrew/core"
 tap "homebrew/services"
 # Library for manipulating PNG images
 brew "libpng"
@@ -19,6 +21,8 @@ brew "chruby"
 brew "cmake"
 # Console Matrix
 brew "cmatrix"
+# GNU File, Shell, and Text utilities
+brew "coreutils"
 # Message bus system, providing inter-application communication
 brew "dbus"
 # Modern replacement for 'ls'
@@ -73,6 +77,8 @@ brew "openssl@1.1"
 brew "postgresql@14"
 # Interpreted, interactive, object-oriented programming language
 brew "python@3.9"
+# Tools for and transforming and inspecting PDF files
+brew "qpdf"
 # Persistent key-value database, with built-in net interface
 brew "redis"
 # Install Ruby, JRuby, Rubinius, TruffleRuby, or mruby
