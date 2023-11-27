@@ -80,11 +80,12 @@ export MANPAGER="sh -c 'col -bx | bat -l man -p'"
 #source ~/.config/oh-my-zsh/themes/powerlevel10k/powerlevel10k.zsh-theme
 export PATH="$HOME/rubyonmac:$PATH"
 
-source /opt/homebrew/opt/chruby/share/chruby/chruby.sh
-source /opt/homebrew/opt/chruby/share/chruby/auto.sh
-
-chruby ruby-
-
 eval "$(nodenv init -)"
 
-nodenv global 16.19.0
+source "$(brew --prefix)/opt/chruby/share/chruby/chruby.sh"
+
+source "$(brew --prefix)/opt/chruby/share/chruby/auto.sh"
+
+chruby ruby-3.2.2
+
+nodenv global 18.18.2
