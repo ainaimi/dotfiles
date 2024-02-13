@@ -1,7 +1,5 @@
 tap "heroku/brew"
 tap "homebrew/bundle"
-tap "homebrew/cask"
-tap "homebrew/core"
 tap "homebrew/services"
 # Library for manipulating PNG images
 brew "libpng"
@@ -79,6 +77,8 @@ brew "postgresql@14"
 brew "python@3.9"
 # Tools for and transforming and inspecting PDF files
 brew "qpdf"
+# Software environment for statistical computing
+brew "r"
 # Persistent key-value database, with built-in net interface
 brew "redis"
 # Install Ruby, JRuby, Rubinius, TruffleRuby, or mruby
@@ -119,6 +119,8 @@ cask "google-chrome"
 cask "istat-menus"
 # Terminal emulator as alternative to Apple's Terminal app
 cask "iterm2"
+# Programming language for technical computing
+cask "julia"
 # Open-source keystroke visualizer
 cask "keycastr"
 # Full TeX Live distribution with GUI applications
@@ -158,10 +160,12 @@ mas "PDF Expert", id: 1055273043
 mas "Todoist", id: 585829637
 mas "WhatsApp", id: 1147396723
 mas "Xcode", id: 497799835
-vscode "James-Yu.latex-workshop"
+vscode "james-yu.latex-workshop"
+vscode "julialang.language-julia"
 vscode "maltehei.latex-citations"
 vscode "mathematic.vscode-latex"
 vscode "ms-azuretools.vscode-docker"
+vscode "ms-python.debugpy"
 vscode "ms-python.python"
 vscode "ms-python.vscode-pylance"
 vscode "ms-toolsai.jupyter"
@@ -171,5 +175,5 @@ vscode "ms-toolsai.vscode-jupyter-cell-tags"
 vscode "ms-toolsai.vscode-jupyter-slideshow"
 vscode "ms-vscode-remote.remote-containers"
 vscode "ms-vsliveshare.vsliveshare"
-vscode "REditorSupport.r"
+vscode "reditorsupport.r"
 vscode "yzane.markdown-pdf"
