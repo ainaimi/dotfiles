@@ -13,6 +13,8 @@ brew "bat"
 brew "bat-extras"
 # Parser generator
 brew "bison"
+# Library for command-line editing
+brew "readline"
 # Ruby environment tool
 brew "chruby"
 # Cross-platform make
@@ -35,8 +37,6 @@ brew "gh"
 brew "git"
 # Multi-platform library for OpenGL applications
 brew "glfw"
-# Library for command-line editing
-brew "readline"
 # User-friendly cURL replacement (command-line HTTP client)
 brew "httpie"
 # LLVM's OpenMP runtime library
@@ -78,7 +78,7 @@ brew "python@3.9"
 # Tools for and transforming and inspecting PDF files
 brew "qpdf"
 # Software environment for statistical computing
-brew "r"
+brew "r", link: false
 # Persistent key-value database, with built-in net interface
 brew "redis"
 # Install Ruby, JRuby, Rubinius, TruffleRuby, or mruby
@@ -99,11 +99,11 @@ cask "1password"
 cask "adobe-acrobat-reader"
 # Application launcher and productivity software
 cask "alfred"
-# Menu bar icon organizer
+# Menu bar icon organiser
 cask "bartender"
 # Voice and text chat software
 cask "discord"
-# App to build and share containerized applications and microservices
+# App to build and share containerised applications and microservices
 cask "docker"
 # Client for the Dropbox cloud storage service
 cask "dropbox"
@@ -121,7 +121,7 @@ cask "istat-menus"
 cask "iterm2"
 # Programming language for technical computing
 cask "julia"
-# Open-source keystroke visualizer
+# Open-source keystroke visualiser
 cask "keycastr"
 # Full TeX Live distribution with GUI applications
 cask "mactex"
@@ -129,7 +129,7 @@ cask "mactex"
 cask "miniforge"
 # Online collaborative whiteboard platform
 cask "miro"
-# App to write, plan, collaborate, and get organized
+# App to write, plan, collaborate, and get organised
 cask "notion"
 # Knowledge base that works on top of a local folder of plain text Markdown files
 cask "obsidian"
