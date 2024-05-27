@@ -78,7 +78,7 @@ brew "python@3.9"
 # Tools for and transforming and inspecting PDF files
 brew "qpdf"
 # Software environment for statistical computing
-brew "r", link: false
+brew "r"
 # Persistent key-value database, with built-in net interface
 brew "redis"
 # Install Ruby, JRuby, Rubinius, TruffleRuby, or mruby
@@ -145,6 +145,8 @@ cask "slack"
 cask "spotify"
 # Video game digital distribution service
 cask "steam"
+# File transfer application
+cask "transmit"
 # Open-source code editor
 cask "visual-studio-code"
 # Video communication and virtual meeting platform
