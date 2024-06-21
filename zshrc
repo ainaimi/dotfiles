@@ -78,6 +78,8 @@ function mkcd() {
 # SYNTAX HIGHLIGHTING FOR MAN PAGES USING BAT
 export MANPAGER="sh -c 'col -bx | bat -l man -p'"
 #source ~/.config/oh-my-zsh/themes/powerlevel10k/powerlevel10k.zsh-theme
+
+
 export PATH="$HOME/rubyonmac:$PATH"
 
 eval "$(nodenv init -)"
@@ -89,3 +91,10 @@ source "$(brew --prefix)/opt/chruby/share/chruby/auto.sh"
 chruby ruby-3.2.2
 
 nodenv global 18.18.2
+
+source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+alias cd="z"
+
+eval "$(zoxide init zsh)"
+export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"
