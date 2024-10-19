@@ -7,6 +7,8 @@ brew "libpng"
 brew "automake"
 # Cryptography and SSL/TLS Toolkit
 brew "openssl@3"
+# C library of Git core methods that is re-entrant and linkable
+brew "libgit2@1.7"
 # Clone of cat(1) with syntax highlighting and Git integration
 brew "bat"
 # Bash scripts that integrate bat with various command-line tools
@@ -27,6 +29,8 @@ brew "coreutils"
 brew "dbus"
 # Modern replacement for 'ls'
 brew "exa"
+# Lightweight scripting language for querying databases
+brew "flux"
 # GNU compiler collection
 brew "gcc"
 # GNU database manager
@@ -35,6 +39,8 @@ brew "gdbm"
 brew "gh"
 # Distributed revision control system
 brew "git"
+# Quickly rewrite git repository history
+brew "git-filter-repo"
 # Multi-platform library for OpenGL applications
 brew "glfw"
 # User-friendly cURL replacement (command-line HTTP client)
@@ -60,7 +66,7 @@ brew "libyaml"
 # Mac App Store command-line interface
 brew "mas"
 # Open source relational database management system
-brew "mysql", restart_service: true
+brew "mysql"
 # Node version management
 brew "n"
 # Manage multiple NodeJS versions
@@ -89,8 +95,12 @@ brew "rust"
 brew "watchman"
 # JavaScript package manager
 brew "yarn"
+# Shell extension to navigate your filesystem faster
+brew "zoxide"
 # UNIX shell (command interpreter)
 brew "zsh"
+# Fish shell like syntax highlighting for zsh
+brew "zsh-syntax-highlighting"
 # Everything you need to get started with Heroku
 brew "heroku/brew/heroku"
 # Password manager that keeps all passwords secure behind one password
@@ -103,6 +113,8 @@ cask "alacritty"
 cask "alfred"
 # Menu bar icon organiser
 cask "bartender"
+# Utility that prevents the system from going to sleep
+cask "caffeine"
 # Voice and text chat software
 cask "discord"
 # App to build and share containerised applications and microservices
@@ -111,6 +123,7 @@ cask "docker"
 cask "dropbox"
 # Web browser
 cask "firefox"
+cask "font-mononoki-nerd-font"
 # Free and open-source image editor
 cask "gimp"
 # Git client focusing on productivity
@@ -162,7 +175,7 @@ mas "Numbers", id: 409203825
 mas "Pages", id: 409201541
 mas "PDF Expert", id: 1055273043
 mas "Todoist", id: 585829637
-mas "WhatsApp", id: 1147396723
+mas "WhatsApp (old)", id: 1147396723
 mas "Xcode", id: 497799835
 vscode "james-yu.latex-workshop"
 vscode "julialang.language-julia"

@@ -12,3 +12,5 @@
 	excludesfile = /Users/ain/.gitignore_global
 [credential]
 	helper = osxkeychain
+[http]
+	postBuffer = 157286400
