@@ -66,7 +66,7 @@ brew "libyaml"
 # Mac App Store command-line interface
 brew "mas"
 # Open source relational database management system
-brew "mysql"
+brew "mysql", restart_service: true
 # Node version management
 brew "n"
 # Manage multiple NodeJS versions
