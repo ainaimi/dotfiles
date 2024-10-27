@@ -27,8 +27,8 @@ brew "cmatrix"
 brew "coreutils"
 # Message bus system, providing inter-application communication
 brew "dbus"
-# Modern replacement for 'ls'
-brew "exa"
+# Modern, maintained replacement for ls
+brew "eza"
 # Lightweight scripting language for querying databases
 brew "flux"
 # GNU compiler collection
@@ -177,6 +177,7 @@ mas "PDF Expert", id: 1055273043
 mas "Todoist", id: 585829637
 mas "WhatsApp (old)", id: 1147396723
 mas "Xcode", id: 497799835
+mas "‎WhatsApp", id: 310633997
 vscode "james-yu.latex-workshop"
 vscode "julialang.language-julia"
 vscode "maltehei.latex-citations"
