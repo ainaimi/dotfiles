@@ -64,8 +64,8 @@ path=(
 )
 
 # USER CONFIGURATIONS
-#alias ls='exa -laFh --git'
-alias exa="exa -laFh --git"
+alias ls="eza --icons --long --header"
+#alias eza="eza --icons --long --header"
 alias bbd="brew bundle dump --force --describe"
 alias trail='<<<${(F)path}' # single quotes matter here!!
 alias rm=trash # don't forget that you did this: changing rm default behavior
