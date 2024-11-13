@@ -59,24 +59,24 @@ brew "less"
 brew "libffi"
 # Implementation of the file(1) command
 brew "libmagic"
-# Implementation of the Double Ratchet cryptographic ratchet
-brew "libolm"
 # YAML Parser
 brew "libyaml"
+# Next-gen compiler infrastructure
+brew "llvm"
 # Mac App Store command-line interface
 brew "mas"
 # Open source relational database management system
-brew "mysql", restart_service: true
+brew "mysql"
 # Node version management
 brew "n"
+# Package compiler and linker metadata toolkit
+brew "pkgconf"
 # Manage multiple NodeJS versions
 brew "nodenv"
 # Optimized BLAS library
 brew "openblas"
 # Development kit for the Java programming language
 brew "openjdk"
-# Cryptography and SSL/TLS Toolkit
-brew "openssl@1.1"
 # Object-relational database system
 brew "postgresql@14"
 # Interpreted, interactive, object-oriented programming language
@@ -84,7 +84,7 @@ brew "python@3.9"
 # Tools for and transforming and inspecting PDF files
 brew "qpdf"
 # Software environment for statistical computing
-brew "r"
+brew "r", link: false
 # Persistent key-value database, with built-in net interface
 brew "redis"
 # Install Ruby, JRuby, Rubinius, TruffleRuby, or mruby
