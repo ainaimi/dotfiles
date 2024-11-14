@@ -1,6 +1,15 @@
-# dotfiles
+# dotfiles and OS Setup
 
-learning how to use dotfiles.
+This repository contains dotfiles and other OS setup files that I use to setup a new computer, or reinstall OS on an existing one. 
+
+If you are new to dotfiles and want to learn more about them and how to use them, I'd recommend the following (in order):
+
+    - https://is.gd/XPDOtl
+    - https://dotfiles.github.io/tutorials/
+    - https://is.gd/CFejeN
+
+# How to use this repository
+
 
 ## TODO
 - Terminal Preferences
