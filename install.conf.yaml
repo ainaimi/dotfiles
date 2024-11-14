@@ -8,9 +8,6 @@
     ~/.gitconfig:
     ~/.zshrc:
     ~/.zshenv:
-    ~/.config/alacritty:
-        create: true
-        path: config/alacritty
     ~/.config/bat:
         create: true
         path: config/bat
