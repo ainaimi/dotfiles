@@ -10,6 +10,16 @@ If you are new to dotfiles and want to learn more about them and how to use them
 
 # How to use this repository
 
+## in progress
+
+## rough order of operations
+
+1) cd into ~ and git clone dotfiles repository
+2) run install.sh
+3) dropbox
+4) 1pw
+5) other?
+
 
 ## TODO
 - Terminal Preferences
@@ -25,8 +35,8 @@ If you are new to dotfiles and want to learn more about them and how to use them
 ## General ToDo
 - Uninstall unwanted applications shipped with macOS
 - Setup macOS options (e.g., ttps://github.com/mathiasbynens/dotfiles/blob/main/.macos)
-- Install apps via brew
-    - use brewfile
+- ~~Install apps via brew~~
+    - ~~use brewfile~~
     
 
 ## NOTES
