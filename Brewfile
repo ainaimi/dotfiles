@@ -107,8 +107,6 @@ brew "heroku/brew/heroku"
 cask "1password"
 # View, print, and comment on PDF documents
 cask "adobe-acrobat-reader"
-# GPU-accelerated terminal emulator
-cask "alacritty"
 # Application launcher and productivity software
 cask "alfred"
 # Menu bar icon organiser
