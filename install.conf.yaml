@@ -2,10 +2,17 @@
     link:
       relink: true
 
+- create:
+    - ~/.ssh
+    - ~/.config
+    - ~/projects
+
 - clean: ['~']
 
 - link:
-    ~/.gitconfig:
+    ~/.dotfiles: ""
+    ~/.gitconfig: git/.gitconfig
+    ~/.ssh/config: ssh/config
     ~/.zshrc:
     ~/.zshenv:
     ~/.config/bat:
@@ -17,9 +24,6 @@
     ~/.config/oh-my-zsh:
         create: true
         path: config/oh-my-zsh
-
-- create:
-    - ~/Work
 
 - shell:
     - command: ./setup_homebrew.zsh
