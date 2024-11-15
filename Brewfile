@@ -69,6 +69,8 @@ brew "mas"
 brew "mysql"
 # Node version management
 brew "n"
+# Ambitious Vim-fork focused on extensibility and agility
+brew "neovim"
 # Package compiler and linker metadata toolkit
 brew "pkgconf"
 # Manage multiple NodeJS versions
