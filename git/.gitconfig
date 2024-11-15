@@ -1,8 +1,9 @@
+
 [init]
 	defaultBranch = main
 [user]
-	name = Ashley Naimi
-	email = ashley.naimi@emory.edu
+	name = Ashley Isaac Naimi
+	email = 23343163+ainaimi@users.noreply.github.com
 [filter "lfs"]
 	process = git-lfs filter-process
 	required = true
