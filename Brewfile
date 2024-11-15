@@ -107,6 +107,8 @@ brew "zsh-syntax-highlighting"
 brew "heroku/brew/heroku"
 # Password manager that keeps all passwords secure behind one password
 cask "1password"
+# Command-line interface for 1Password
+cask "1password-cli"
 # View, print, and comment on PDF documents
 cask "adobe-acrobat-reader"
 # Application launcher and productivity software
