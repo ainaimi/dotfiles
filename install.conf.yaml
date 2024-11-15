@@ -24,6 +24,9 @@
     ~/.config/oh-my-zsh:
         create: true
         path: config/oh-my-zsh
+    ~/.config/iterm2:
+        create: true
+        path: config/iterm2
 
 - shell:
     - command: ./setup_homebrew.zsh
