@@ -67,8 +67,6 @@ brew "llvm"
 brew "mas"
 # Open source relational database management system
 brew "mysql"
-# Node version management
-brew "n"
 # Ambitious Vim-fork focused on extensibility and agility
 brew "neovim"
 # Package compiler and linker metadata toolkit
