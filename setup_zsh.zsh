@@ -22,8 +22,10 @@ if sh --version | grep -q zsh; then
 else
     echo "Enter user password to symlink sh to zsh"
     # this didn't work the way we wanted to so reverted back.
+    ## this runs the original version fo zsh, not the homebrew version of zsh
     sudo ln -sfv /bin/zsh /private/var/select/sh
 
     # we tried to get this to work, but wouldn't symlink
+    ## this would run the homebrew version of zsh, but didn't work
     # sudo ln -sfv /opt/homebrew/bin/zsh /private/var/select/sh
 fi

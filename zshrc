@@ -28,6 +28,7 @@ zstyle ':omz:update' mode reminder  # just remind me to update when it's time
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
+# information on available plugins: https://github.com/ohmyzsh/ohmyzsh/wiki/plugins
 plugins=(
     zsh-autosuggestions
     )
@@ -65,7 +66,6 @@ path=(
 
 # USER CONFIGURATIONS
 alias ls="eza --icons --long --header"
-#alias eza="eza --icons --long --header"
 alias bbd="brew bundle dump --force --describe"
 alias trail='<<<${(F)path}' # single quotes matter here!!
 alias rm=trash # don't forget that you did this: changing rm default behavior
