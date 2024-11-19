@@ -12,6 +12,7 @@
 - link:
     ~/.dotfiles: ""
     ~/.gitconfig: git/.gitconfig
+    ~/.gitignore_global: git/.gitignore_global
     ~/.ssh/config: ssh/config
     ~/.zshrc:
     ~/.zshenv:
