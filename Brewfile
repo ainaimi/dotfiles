@@ -84,7 +84,7 @@ brew "python@3.9"
 # Tools for and transforming and inspecting PDF files
 brew "qpdf"
 # Software environment for statistical computing
-brew "r", link: false
+brew "r"
 # Persistent key-value database, with built-in net interface
 brew "redis"
 # Install Ruby, JRuby, Rubinius, TruffleRuby, or mruby
@@ -178,6 +178,8 @@ mas "Todoist", id: 585829637
 mas "WhatsApp (old)", id: 1147396723
 mas "Xcode", id: 497799835
 mas "‎WhatsApp", id: 310633997
+vscode "andrewberty.noir-theme-bundle"
+vscode "be5invis.vscode-custom-css"
 vscode "james-yu.latex-workshop"
 vscode "julialang.language-julia"
 vscode "maltehei.latex-citations"
@@ -193,5 +195,6 @@ vscode "ms-toolsai.vscode-jupyter-cell-tags"
 vscode "ms-toolsai.vscode-jupyter-slideshow"
 vscode "ms-vscode-remote.remote-containers"
 vscode "ms-vsliveshare.vsliveshare"
+vscode "rdebugger.r-debugger"
 vscode "reditorsupport.r"
 vscode "yzane.markdown-pdf"
