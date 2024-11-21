@@ -17,6 +17,8 @@ brew "bat-extras"
 brew "bison"
 # Library for command-line editing
 brew "readline"
+# X.Org: Core X11 protocol client library
+brew "libx11"
 # Ruby environment tool
 brew "chruby"
 # Cross-platform make
