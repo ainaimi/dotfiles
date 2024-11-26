@@ -25,6 +25,15 @@
     ~/.config/oh-my-zsh:
         create: true
         path: config/oh-my-zsh
+    ~/Library/Application Support/Code/User/custom.css:
+        create: true
+        path: vscode/custom.css
+    ~/Library/Application Support/Code/User/settings.json:
+        create: true
+        path: vscode/settings.json
+    ~/Library/Application Support/Code/User/keybindings.json:
+        create: true
+        path: vscode/keybindings.json
 
 - shell:
     - command: ./setup_homebrew.zsh
