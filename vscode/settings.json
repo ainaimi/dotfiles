@@ -1,0 +1,101 @@
+{
+    // The following are a aesthetic settings, largely taken from 
+    // https://dev.to/andrewgeorge/minimal-vscode-ui-343e
+    // goal is to get a dark, clean, minimalist version of VS Code
+    "workbench.colorTheme": "Noir Tokyo Night Black",
+    "workbench.sideBar.location": "right",
+    "workbench.statusBar.visible": false,
+    "workbench.layoutControl.type": "menu",
+    "workbench.layoutControl.enabled": false,
+    "workbench.startupEditor": "readme",
+    "workbench.tree.renderIndentGuides": "none",
+
+    "editor.minimap.enabled": false,
+    "editor.hideCursorInOverviewRuler": true,
+    "editor.overviewRulerBorder": false,
+    "editor.scrollbar.horizontal": "hidden",
+    "editor.scrollbar.vertical": "hidden",
+    "editor.cursorBlinking": "phase",
+    "editor.cursorSmoothCaretAnimation": "on",
+    "editor.renderLineHighlight": "none",
+    "editor.showFoldingControls": "never",
+    "editor.accessibilitySupport": "off",
+    "editor.rulers": [
+        120
+    ],
+    //"editor.glyphMargin": false,
+    //"editor.lineNumbers": "off",
+    
+    "breadcrumbs.enabled": false,
+    
+    "explorer.openEditors.visible": 1, //changed this from 0 to 1 to avoid "problems" warning
+    "explorer.decorations.colors": false,
+
+    "window.title": " ",
+    "window.titleBarStyle": "custom", 
+    "window.zoomLevel": 2,
+    
+    // to get a fancy terminal / iterm2 in VScode
+    "terminal.integrated.fontFamily": "MesloLGS NF",
+    "terminal.integrated.commandsToSkipShell": [
+        "language-julia.interrupt"
+    ],
+
+    // the content in "custom.css" removes the tabs from VSCode
+    // instead, use ctrl + tab to switch tabs
+    // obtained from: https://dev.to/andrewgeorge/minimal-vscode-ui-343e
+    // enter a url for your custom css file
+    // this needs to be a url, which we get by using 'file:// ... '
+    // the space between "Application" and "Support" should be coded as %20
+    // TODO: NEED TO MAKE THIS GENERAL SO OTHERS CAN INSTALL
+    "vscode_custom_css.imports": ["file:///Users/ain/Library/Application%20Support/Code/User/custom.css"],
+
+    
+    // git options
+    // Control whether a repository in parent folders of workspaces or open files should be opened.
+    //  - always: Always open a repository in parent folders of workspaces or open files.
+    //  - never: Never open a repository in parent folders of workspaces or open files.
+    //  - prompt: Prompt before opening a repository the parent folders of workspaces or open files.
+    "git.openRepositoryInParentFolders": "always",
+
+    // R settings
+    "r.plot.useHttpgd": true,
+      // make sure ".rmd" files are treated as R Markdown
+    "files.associations": {
+        "*.rmd": "rmd"
+    },
+    // don't know what any of these r specific options do
+    // copied from: https://gist.github.com/strengejacke/82e8d7b869bd9f961d12b4091c145b88
+    // look into them 
+    // "r.alwaysUseActiveTerminal": true,
+    // "r.bracketedPaste": true,
+    // "r.plot.useHttpgd": true,
+    // "r.plot.defaults.fullWindowMode": true,
+    // "r.rpath.windows": "C:\\Program Files\\R\\R-4.3.3\\bin\\R.exe",
+    // "r.rterm.windows": "C:\\Program Files\\R\\R-4.3.3\\bin\\x64\\Rterm.exe",  
+    // // "r.rterm.windows": "C:\\Users\\mail\\AppData\\Local\\Programs\\Python\\Python311\\Scripts\\radian.exe",
+    // "r.removeLeadingComments": true,
+    // "r.session.levelOfObjectDetail": "Normal",
+    // "quarto.mathjax.theme": "dark",
+
+    // not sure what this does?
+    "[python]": {
+        "editor.formatOnType": true
+    },
+    
+    // liveshare options
+    "liveshare.allowGuestDebugControl": true,
+    "liveshare.allowGuestTaskControl": true,
+    "liveshare.languages.allowGuestCommandControl": true,
+    "liveshare.openSharedServers": false,
+    "liveshare.publishWorkspaceInfo": true,
+    "julia.symbolCacheDownload": true,
+    "workbench.activityBar.location": "hidden",
+
+    // not sure what this does, commenting out for now
+    //"julia.symbolCacheDownload": true,
+    //"julia.enableTelemetry": false,
+    
+    
+    
+}

@@ -42,3 +42,6 @@
     - command: ./setup_zsh.zsh
       stdout: true
       stderr: true
+    - command: ./save_vscode_extensions.sh
+      stdout: true
+      stderr: true
