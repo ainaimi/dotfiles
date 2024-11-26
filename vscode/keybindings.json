@@ -1,0 +1,41 @@
+// Place your key bindings in this file to override the defaultsauto[]
+[
+    {
+        "key": "shift+alt+z",
+        "command": "workbench.action.terminal.openNativeConsole",
+        "when": "!terminalFocus"
+    },
+    {
+        "key": "shift+cmd+c",
+        "command": "-workbench.action.terminal.openNativeConsole",
+        "when": "!terminalFocus"
+    },
+    {
+        "key": "shift+cmd+/",
+        "command": "editor.action.addCommentLine",
+        "when": "editorTextFocus && !editorReadonly"
+    },
+    {
+        "key": "cmd+k cmd+c",
+        "command": "-editor.action.addCommentLine",
+        "when": "editorTextFocus && !editorReadonly"
+    },
+    {
+        "key": "shift+cmd+c",
+        "command": "editor.action.commentLine",
+        "when": "editorTextFocus && !editorReadonly"
+    },
+    {
+        "key": "cmd+/",
+        "command": "-editor.action.commentLine",
+        "when": "editorTextFocus && !editorReadonly"
+    },
+    {
+        "key": "alt+cmd+t",
+        "command": "-workbench.action.closeOtherEditors"
+    },
+    {
+        "key": "alt+cmd+t",
+        "command": "workbench.action.toggleActivityBarVisibility"
+    }
+]
