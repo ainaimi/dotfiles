@@ -79,8 +79,12 @@ brew "nodenv"
 brew "openblas"
 # Development kit for the Java programming language
 brew "openjdk"
+# Execute binaries from Python packages in isolated environments
+brew "pipx"
 # Object-relational database system
 brew "postgresql@14"
+# Framework for managing multi-language pre-commit hooks
+brew "pre-commit"
 # Interpreted, interactive, object-oriented programming language
 brew "python@3.9"
 # Tools for and transforming and inspecting PDF files
@@ -148,6 +152,8 @@ cask "miniforge"
 cask "miro"
 # App to write, plan, collaborate, and get organised
 cask "notion"
+# Open-source software for live streaming and screen recording
+cask "obs"
 # Knowledge base that works on top of a local folder of plain text Markdown files
 cask "obsidian"
 # Environment for statistical computing and graphics
