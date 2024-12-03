@@ -1,44 +1,34 @@
 # dotfiles and OS Setup
 
-This repository contains dotfiles and other OS setup files that I use to setup a new computer, or reinstall OS on an existing one. 
+This repository contains dotfiles, OS setup files, Brew binaries, Mac Apps, VSCode extentiosn and other files that I use. 
 
-If you are new to dotfiles and want to learn more about them and how to use them, I'd recommend the following (in order):
-
-    - https://is.gd/XPDOtl
-    - https://dotfiles.github.io/tutorials/
-    - https://is.gd/CFejeN
-
-# How to use this repository
-
-## in progress
-
-## rough order of operations
+## 
 
 1) cd into ~ and git clone dotfiles repository
 2) run install.sh
-3) dropbox
-4) 1pw
-5) other?
+3) 1pw
+4) db
 
 
-## TODO
-- Terminal Preferences
-- ~~Change Shell to ZSH~~
-- Dock Preferences
-- Mission Control Preference (don't rearrange spaces)
-- Finder Show Path Bar
-- Trackpad (three finger drag, tap to click)
-- ~~.zshrc~~
-- ~~Git (config and SSH)~~
-- ~~Homebrew Install~~
+## TODOs
+- [] 1Password settings
+- [] Dropbox login and settings
+- [] ~~Terminal Preferences from iTerm2~~
+- [] ~~Install and Adapt VS Code Including~~
+        - [] ~~All user preferences in settings.json~~
+        - [] ~~all extensions (see https://stackoverflow.com/a/49398449)~~
+        - [] ~~Add separate GH repo specific to VS Code installs R for liveshare~~
+                - [] ~~Make this mac and windows friendly~~
+- SSH configurations
+        - [] for GH
+        - [] for computing cluster
 
-## General ToDo
-- Uninstall unwanted applications shipped with macOS
-- Setup macOS options (e.g., ttps://github.com/mathiasbynens/dotfiles/blob/main/.macos)
-- ~~Install apps via brew~~
-    - ~~use brewfile~~
-    
 
-## NOTES
+## Notes 
 
-- Use brew install watchman to avoid macOS GateKeeper: https://superuser.com/questions/1635602/how-to-disable-quarantine-completely-in-macos
+- Use brew install watchman to avoid macOS GateKeeper: 
+        - https://superuser.com/questions/1635602/how-to-disable-quarantine-completely-in-macos
+- Security:
+        - https://htoopyaelwin.medium.com/organizing-your-dotfiles-managing-secrets-8fd33f06f9bf
+- Add gitmessage: 
+        - https://gist.github.com/lisawolderiksen/a7b99d94c92c6671181611be1641c733
