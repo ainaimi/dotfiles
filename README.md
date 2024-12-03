@@ -20,14 +20,14 @@ This repository contains dotfiles, OS setup files, Brew binaries, Mac Apps, VSCo
     - :ballot_box_with_check: all extensions (see https://stackoverflow.com/a/49398449)
     - :ballot_box_with_check: Add separate GH repo specific to VS Code installs R for liveshare
         - :ballot_box_with_check: Make this mac and windows friendly
-- SSH configurations
+- [ ] SSH configurations
     - [ ] for GH
     - [ ] for computing cluster
 
 
 ## Notes 
 
-- Use brew install watchman to avoid macOS GateKeeper: 
+- :ballot_box_with_check: Use brew install watchman to avoid macOS GateKeeper: 
     - https://is.gd/DWmfDD
 - Security:
     - https://is.gd/ql1EXR
