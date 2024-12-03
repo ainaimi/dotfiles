@@ -121,6 +121,8 @@ cask "alfred"
 cask "bartender"
 # Utility that prevents the system from going to sleep
 cask "caffeine"
+# Monitors and peripherals manager
+cask "ddpm"
 # Voice and text chat software
 cask "discord"
 # App to build and share containerised applications and microservices
@@ -140,8 +142,6 @@ cask "google-chrome"
 cask "istat-menus"
 # Terminal emulator as alternative to Apple's Terminal app
 cask "iterm2"
-# Programming language for technical computing
-cask "julia"
 # Open-source keystroke visualiser
 cask "keycastr"
 # Full TeX Live distribution with GUI applications
