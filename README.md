@@ -14,6 +14,7 @@ This repository contains dotfiles, OS setup files, Brew binaries, Mac Apps, VSCo
 - [ ] 1Password settings
 - [ ] Dropbox login and settings
 - [ ] Programmatically install `code` CLI, w/o having to open up vscode
+- [ ] Add conditional to 'setup_vscode.zsh' to verify whether extentions are already installed
 - :ballot_box_with_check: Terminal Preferences from iTerm2
 - :ballot_box_with_check: Install and Adapt VS Code Including:
     - :ballot_box_with_check: All user preferences in settings.json
