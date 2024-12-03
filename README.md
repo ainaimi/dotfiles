@@ -14,22 +14,22 @@ This repository contains dotfiles, OS setup files, Brew binaries, Mac Apps, VSCo
 - [ ] 1Password settings
 - [ ] Dropbox login and settings
 - [ ] Programmatically install `code` CLI, w/o having to open up vscode
-- [ :ballot_box_with_check: ] Terminal Preferences from iTerm2
-- [ ] ~~Install and Adapt VS Code Including:~~
-        - [ ] ~~All user preferences in settings.json~~
-        - [ ] ~~all extensions (see https://stackoverflow.com/a/49398449)~~
-        - [ ] ~~Add separate GH repo specific to VS Code installs R for liveshare~~
-                - [ ] ~~Make this mac and windows friendly~~
+- :ballot_box_with_check: Terminal Preferences from iTerm2
+- :ballot_box_with_check: Install and Adapt VS Code Including:
+    - :ballot_box_with_check: All user preferences in settings.json
+    - :ballot_box_with_check: all extensions (see https://stackoverflow.com/a/49398449)
+    - :ballot_box_with_check: Add separate GH repo specific to VS Code installs R for liveshare
+        - :ballot_box_with_check: Make this mac and windows friendly
 - SSH configurations
-        - [ ] for GH
-        - [ ] for computing cluster
+    - [ ] for GH
+    - [ ] for computing cluster
 
 
 ## Notes 
 
 - Use brew install watchman to avoid macOS GateKeeper: 
-        - https://superuser.com/questions/1635602/how-to-disable-quarantine-completely-in-macos
+    - https://is.gd/DWmfDD
 - Security:
-        - https://htoopyaelwin.medium.com/organizing-your-dotfiles-managing-secrets-8fd33f06f9bf
+    - https://is.gd/ql1EXR
 - Add gitmessage: 
-        - https://gist.github.com/lisawolderiksen/a7b99d94c92c6671181611be1641c733
+    - https://is.gd/qCHpR3
