@@ -11,17 +11,18 @@ This repository contains dotfiles, OS setup files, Brew binaries, Mac Apps, VSCo
 
 
 ## TODOs
-- [] 1Password settings
-- [] Dropbox login and settings
-- [] ~~Terminal Preferences from iTerm2~~
-- [] ~~Install and Adapt VS Code Including~~
-        - [] ~~All user preferences in settings.json~~
-        - [] ~~all extensions (see https://stackoverflow.com/a/49398449)~~
-        - [] ~~Add separate GH repo specific to VS Code installs R for liveshare~~
-                - [] ~~Make this mac and windows friendly~~
+- [ ] 1Password settings
+- [ ] Dropbox login and settings
+- [ ] Programmatically install `code` CLI, w/o having to open up vscode
+- [ ] ~~Terminal Preferences from iTerm2~~
+- [ ] ~~Install and Adapt VS Code Including~~
+        - [ ] ~~All user preferences in settings.json~~
+        - [ ] ~~all extensions (see https://stackoverflow.com/a/49398449)~~
+        - [ ] ~~Add separate GH repo specific to VS Code installs R for liveshare~~
+                - [ ] ~~Make this mac and windows friendly~~
 - SSH configurations
-        - [] for GH
-        - [] for computing cluster
+        - [ ] for GH
+        - [ ] for computing cluster
 
 
 ## Notes 
