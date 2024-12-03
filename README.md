@@ -1,6 +1,6 @@
 # dotfiles and OS Setup
 
-This repository contains dotfiles, OS setup files, Brew binaries, Mac Apps, VSCode extentiosn and other files that I use. 
+This repository contains dotfiles, OS setup files, Brew binaries, Mac Apps, VSCode extensions and other files that I use. 
 
 ## 
 
@@ -18,7 +18,7 @@ This repository contains dotfiles, OS setup files, Brew binaries, Mac Apps, VSCo
 - :ballot_box_with_check: Terminal Preferences from iTerm2
 - :ballot_box_with_check: Install and Adapt VS Code Including:
     - :ballot_box_with_check: All user preferences in settings.json
-    - :ballot_box_with_check: all extensions (see https://stackoverflow.com/a/49398449)
+    - :ballot_box_with_check: all extensions (see https://is.gd/FM4lyO)
     - :ballot_box_with_check: Add separate GH repo specific to VS Code installs R for liveshare
         - :ballot_box_with_check: Make this mac and windows friendly
 - [ ] SSH configurations
