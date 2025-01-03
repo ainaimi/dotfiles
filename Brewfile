@@ -7,8 +7,6 @@ brew "libpng"
 brew "automake"
 # Cryptography and SSL/TLS Toolkit
 brew "openssl@3"
-# C library of Git core methods that is re-entrant and linkable
-brew "libgit2@1.7"
 # Clone of cat(1) with syntax highlighting and Git integration
 brew "bat"
 # Bash scripts that integrate bat with various command-line tools
@@ -59,6 +57,8 @@ brew "lapack"
 brew "less"
 # Portable Foreign Function Interface library
 brew "libffi"
+# C library of Git core methods that is re-entrant and linkable
+brew "libgit2@1.7"
 # Implementation of the file(1) command
 brew "libmagic"
 # YAML Parser
@@ -117,6 +117,8 @@ cask "1password-cli"
 cask "adobe-acrobat-reader"
 # Application launcher and productivity software
 cask "alfred"
+# Memory training application
+cask "anki"
 # Menu bar icon organiser
 cask "bartender"
 # Utility that prevents the system from going to sleep
@@ -144,6 +146,8 @@ cask "istat-menus"
 cask "iterm2"
 # Open-source keystroke visualiser
 cask "keycastr"
+# ZSA keyboard firmware flasher
+cask "keymapp"
 # Full TeX Live distribution with GUI applications
 cask "mactex"
 # Minimal installer for conda specific to conda-forge
@@ -174,6 +178,9 @@ cask "transmit"
 cask "visual-studio-code"
 # Video communication and virtual meeting platform
 cask "zoom"
+# Collect, organise, cite, and share research sources
+cask "zotero"
+mas "Drafts", id: 1435957248
 mas "Fantastical", id: 975937182
 mas "GarageBand", id: 682658836
 mas "iMovie", id: 408981434
