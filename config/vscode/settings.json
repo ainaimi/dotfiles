@@ -91,6 +91,8 @@
     "liveshare.publishWorkspaceInfo": true,
     "julia.symbolCacheDownload": true,
     "workbench.activityBar.location": "hidden",
+    "chat.commandCenter.enabled": false,
+    "latex-workshop.latex.build.forceRecipeUsage": false,
 
     // not sure what this does, commenting out for now
     //"julia.symbolCacheDownload": true,
