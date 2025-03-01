@@ -13,10 +13,10 @@ brew "bat"
 brew "bat-extras"
 # Parser generator
 brew "bison"
-# Library for command-line editing
-brew "readline"
 # X.Org: Core X11 protocol client library
 brew "libx11"
+# Library for command-line editing
+brew "readline"
 # Ruby environment tool
 brew "chruby"
 # Cross-platform make
@@ -90,7 +90,7 @@ brew "python@3.9"
 # Tools for and transforming and inspecting PDF files
 brew "qpdf"
 # Software environment for statistical computing
-brew "r"
+brew "r", link: false
 # Persistent key-value database, with built-in net interface
 brew "redis"
 # Install Ruby, JRuby, Rubinius, TruffleRuby, or mruby
@@ -190,15 +190,14 @@ mas "Numbers", id: 409203825
 mas "Pages", id: 409201541
 mas "PDF Expert", id: 1055273043
 mas "Todoist", id: 585829637
+mas "WhatsApp", id: 310633997
 mas "WhatsApp (old)", id: 1147396723
 mas "Xcode", id: 497799835
-mas "‎WhatsApp", id: 310633997
 vscode "andrewberty.noir-theme-bundle"
 vscode "be5invis.vscode-custom-css"
 vscode "james-yu.latex-workshop"
 vscode "julialang.language-julia"
 vscode "maltehei.latex-citations"
-vscode "mathematic.vscode-latex"
 vscode "ms-azuretools.vscode-docker"
 vscode "ms-python.debugpy"
 vscode "ms-python.python"
