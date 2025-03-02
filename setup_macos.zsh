@@ -7,8 +7,8 @@ osascript -e 'tell application "System Preferences" to quit'
 # # Turn off Apple Intelligence 
 # defaults write com.apple.CloudSubscriptionFeatures.optIn '545129924' -bool false
 
-# # Disable the sound effects on boot
-# sudo nvram SystemAudioVolume=%80
+# Disable the sound effects on boot
+sudo nvram SystemAudioVolume=%80
 
 # Set sidebar icon size to large
 defaults write NSGlobalDomain NSTableViewDefaultSizeMode -int 2
