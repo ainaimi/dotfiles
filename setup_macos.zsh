@@ -26,8 +26,11 @@ while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 #sudo scutil --set LocalHostName "0x6D746873"
 #sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.server NetBIOSName -string "0x6D746873"
 
+# Turn off Apple Intelligence 
+defaults write com.apple.CloudSubscriptionFeatures.optIn '545129924' -bool false
+
 # Disable the sound effects on boot
-sudo nvram SystemAudioVolume=" "
+sudo nvram SystemAudioVolume=%80
 
 # Disable transparency in the menu bar and elsewhere on Yosemite
 # defaults write com.apple.universalaccess reduceTransparency -bool true
