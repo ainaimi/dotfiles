@@ -31,6 +31,9 @@ zstyle ':omz:update' mode reminder  # just remind me to update when it's time
 # information on available plugins: https://github.com/ohmyzsh/ohmyzsh/wiki/plugins
 plugins=(
     zsh-autosuggestions
+    z
+    git
+    zsh-syntax-highlighting
     )
 
 export ZSH_COMPDUMP=$ZSH/cache/.zcompdump-$HOST 
