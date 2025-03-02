@@ -2,12 +2,17 @@
 
 This repository contains dotfiles, OS setup files, Brew binaries, Mac Apps, VSCode extensions and other files that I use. 
 
-## 
+## General procedure for a new machine:
 
+0) Install dev tools using: `xcode-select --install`
 1) cd into ~ and git clone dotfiles repository
-2) run install.sh
-3) 1pw
-4) db
+2) run install.sh and route all output to file using: `./install.sh > dotfiles_setup_output.txt 2>&1`
+3) debug ...
+
+## After installs successfully run:
+
+- Airdrop alfred preferences folder from /dotfiles/config to new computer
+
 
 
 ## TODOs
