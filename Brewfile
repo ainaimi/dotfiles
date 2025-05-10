@@ -7,16 +7,20 @@ brew "libpng"
 brew "automake"
 # Cryptography and SSL/TLS Toolkit
 brew "openssl@3"
+# Library for command-line editing
+brew "readline"
+# Official Amazon AWS command-line interface
+brew "awscli"
 # Clone of cat(1) with syntax highlighting and Git integration
 brew "bat"
 # Bash scripts that integrate bat with various command-line tools
 brew "bat-extras"
+# Manipulates BibTeX databases
+brew "bib-tool"
 # Parser generator
 brew "bison"
 # X.Org: Core X11 protocol client library
 brew "libx11"
-# Library for command-line editing
-brew "readline"
 # Ruby environment tool
 brew "chruby"
 # Cross-platform make
@@ -27,8 +31,14 @@ brew "cmatrix"
 brew "coreutils"
 # Message bus system, providing inter-application communication
 brew "dbus"
+# Pack, ship and run any application as a lightweight container
+brew "docker", link: false
 # Modern, maintained replacement for ls
 brew "eza"
+# Framework for layout and rendering of i18n text
+brew "pango"
+# Play, record, convert, and stream audio and video
+brew "ffmpeg"
 # Lightweight scripting language for querying databases
 brew "flux"
 # GNU compiler collection
@@ -77,14 +87,22 @@ brew "pkgconf"
 brew "nodenv"
 # Optimized BLAS library
 brew "openblas"
+# Package for scientific computing with Python
+brew "numpy"
 # Development kit for the Java programming language
 brew "openjdk"
 # Execute binaries from Python packages in isolated environments
 brew "pipx"
 # Object-relational database system
 brew "postgresql@14"
+# Theme for zsh
+brew "powerlevel10k"
 # Framework for managing multi-language pre-commit hooks
 brew "pre-commit"
+# Python 3 bindings for the Cairo graphics library
+brew "py3cairo"
+# Python library for creating static, animated, and interactive visualizations
+brew "python-matplotlib"
 # Interpreted, interactive, object-oriented programming language
 brew "python@3.9"
 # Tools for and transforming and inspecting PDF files
@@ -97,6 +115,8 @@ brew "redis"
 brew "ruby-install"
 # Safe, concurrent, practical language
 brew "rust"
+# Software for mathematics, science, and engineering
+brew "scipy"
 # Watch files and take action when they change
 brew "watchman"
 # JavaScript package manager
@@ -172,12 +192,14 @@ cask "slack"
 cask "spotify"
 # Video game digital distribution service
 cask "steam"
+# Email client
+cask "superhuman"
+# LaTeX editor
+cask "texifier"
 # File transfer application
 cask "transmit"
 # Open-source code editor
 cask "visual-studio-code"
-# Video communication and virtual meeting platform
-cask "zoom"
 # Collect, organise, cite, and share research sources
 cask "zotero"
 mas "Drafts", id: 1435957248
@@ -191,10 +213,10 @@ mas "Pages", id: 409201541
 mas "PDF Expert", id: 1055273043
 mas "Todoist", id: 585829637
 mas "WhatsApp", id: 310633997
-mas "WhatsApp (old)", id: 1147396723
 mas "Xcode", id: 497799835
 vscode "andrewberty.noir-theme-bundle"
 vscode "be5invis.vscode-custom-css"
+vscode "docker.docker"
 vscode "james-yu.latex-workshop"
 vscode "julialang.language-julia"
 vscode "maltehei.latex-citations"
@@ -211,4 +233,5 @@ vscode "ms-vscode-remote.remote-containers"
 vscode "ms-vsliveshare.vsliveshare"
 vscode "rdebugger.r-debugger"
 vscode "reditorsupport.r"
+vscode "rickaym.manim-sideview"
 vscode "yzane.markdown-pdf"
