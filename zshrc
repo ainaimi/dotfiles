@@ -1,103 +1,84 @@
 echo "running the .zshrc file"
 
-# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
-# Initialization code that may require console input (password prompts, [y/n]
-# confirmations, etc.) must go above this block; everything else may go below.
+ # --- Instant Prompt Config (must be at the very top, no console output above this) ---
+typeset -g POWERLEVEL9K_INSTANT_PROMPT=quiet
 if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
-# source /Users/ain/dotfiles/config/oh-my-zsh/custom/themes/powerlevel10k/powerlevel10k.zsh-theme
-
-# Path to your oh-my-zsh installation.
-export ZSH="/Users/ain/.config/oh-my-zsh" # for some reason, can't replace `/Users/ain/` with `~`
-
-# Set name of the theme to load --- if set to "random", it will
-# load a random theme each time oh-my-zsh is loaded, in which case,
-# to know which specific one was loaded, run: echo $RANDOM_THEME
-# See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
+# --- Powerlevel10k Theme ---
+export ZSH="/Users/ain/.config/oh-my-zsh"
 ZSH_THEME="powerlevel10k/powerlevel10k"
 
-# Uncomment one of the following lines to change the auto-update behavior
-# zstyle ':omz:update' mode disabled  # disable automatic updates
-# zstyle ':omz:update' mode auto      # update automatically without asking
-zstyle ':omz:update' mode reminder  # just remind me to update when it's time
-
-# Which plugins would you like to load?
-# Standard plugins can be found in $ZSH/plugins/
-# Custom plugins may be added to $ZSH_CUSTOM/plugins/
-# Example format: plugins=(rails git textmate ruby lighthouse)
-# Add wisely, as too many plugins slow down shell startup.
-# information on available plugins: https://github.com/ohmyzsh/ohmyzsh/wiki/plugins
+# --- Oh My Zsh Plugins ---
 plugins=(
-    zsh-autosuggestions
-    z
-    git
-    zsh-syntax-highlighting
-    )
+  zsh-autosuggestions
+  zsh-syntax-highlighting
+  git
+  z
+)
 
 export ZSH_COMPDUMP=$ZSH/cache/.zcompdump-$HOST 
-# above taken from: https://bit.ly/3npcXId
 source $ZSH/oh-my-zsh.sh
 
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+# Load Powerlevel10k config if present
+[[ -f ~/.p10k.zsh ]] && source ~/.p10k.zsh
 
-# Set Variables
+# --- Environment Variables ---
 export HOMEBREW_CASK_OPTS="--no_quarantine"
 export NULLCMD=bat
-export N_PREFIX="$HOME/.n" # we want this n folder to match the hidden, so dotfile it
-export PREFIX="$N_PREFIX" #do we really need this?
+export N_PREFIX="$HOME/.n"
+export PREFIX="$N_PREFIX"
 
-# so that R can find the libcomp library
 export LDFLAGS="-L/opt/homebrew/opt/libomp/lib"
 export CPPFLAGS="-I/opt/homebrew/opt/libomp/include"
 
-## PATH RELATED ITEMS
-# If you come from bash you might have to change your $PATH.
-# export PATH=$HOME/bin:/usr/local/bin:$PATH
-# export PATH=/opt/R/arm64/bin:$PATH
-# export PATH="$PATH:$N_PREFIX/bin"
-
+# --- PATH Management ---
 typeset -U path
-
 path=(
-  $path
+  /opt/homebrew/bin
+  /opt/homebrew/opt/openjdk/bin
+  /usr/local/bin
+  /usr/bin
+  /bin
+  /usr/sbin
+  /sbin
+  /Library/TeX/texbin
+  /Applications/iTerm.app/Contents/Resources/utilities
   "/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
+  "$HOME/.local/bin"
   "$N_PREFIX/bin"
+  "$HOME/rubyonmac"
+  $path
 )
 
-# USER CONFIGURATIONS
+# --- Aliases ---
 alias ls="eza --icons --long --header"
 alias bbd="brew bundle dump --force --describe"
-alias trail='<<<${(F)path}' # single quotes matter here!!
-alias rm=trash # don't forget that you did this: changing rm default behavior
+alias trail='<<<${(F)path}'
+alias rm=trash
+alias cd="z"  # note: overrides builtin 'cd'
 
-# ADD NEW MKDIR FUNCTION
+# --- Functions ---
 function mkcd() {
    mkdir -p "$@" && cd "$_";
 }
 
-# SYNTAX HIGHLIGHTING FOR MAN PAGES USING BAT
+# --- Tools Config ---
 export MANPAGER="sh -c 'col -bx | bat -l man -p'"
-#source ~/.config/oh-my-zsh/themes/powerlevel10k/powerlevel10k.zsh-theme
 
-
-export PATH="$HOME/rubyonmac:$PATH"
-
+# --- Init Scripts ---
 eval "$(nodenv init -)"
-
-source "$(brew --prefix)/opt/chruby/share/chruby/chruby.sh"
-
-source "$(brew --prefix)/opt/chruby/share/chruby/auto.sh"
-
-chruby ruby-3.2.2
-
-nodenv global 18.18.2
-
-source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-
-alias cd="z"
-
 eval "$(zoxide init zsh)"
-export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"
+
+# Load zsh syntax highlighting manually if not using oh-my-zsh version
+[[ -f /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ]] && \
+  source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+# --- Ruby via chruby ---
+source "$(brew --prefix)/opt/chruby/share/chruby/chruby.sh"
+source "$(brew --prefix)/opt/chruby/share/chruby/auto.sh"
+chruby ruby-3.4.4
+
+# Set nodenv global
+nodenv global 22.17.0
