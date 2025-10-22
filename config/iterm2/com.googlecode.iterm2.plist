@@ -342,7 +342,7 @@
 			<key>Only The Default BG Color Uses Transparency</key>
 			<true/>
 			<key>Open Password Manager Automatically</key>
-			<true/>
+			<false/>
 			<key>Open Toolbelt</key>
 			<false/>
 			<key>Option Key Sends</key>
@@ -444,6 +444,8 @@
 			<string>kNextWindowPointerAction</string>
 		</dict>
 	</dict>
+	<key>ProbeForPassword</key>
+	<false/>
 	<key>PromptOnQuit</key>
 	<false/>
 	<key>ShowFullScreenTabBar</key>
