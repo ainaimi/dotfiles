@@ -97,6 +97,8 @@ brew "neovim"
 brew "pkgconf"
 # Node.js version manager
 brew "nodenv"
+# Create, run, and share large language models (LLMs)
+brew "ollama"
 # Development kit for the Java programming language
 brew "openjdk"
 # Execute binaries from Python packages in isolated environments
