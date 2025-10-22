@@ -159,6 +159,12 @@ cask "docker-desktop"
 cask "dropbox"
 # Web browser
 cask "firefox"
+cask "font-ibm-plex"
+cask "font-libertinus"
+cask "font-libertinus-math"
+cask "font-libertinus-mono"
+cask "font-libertinus-sans"
+cask "font-libertinus-serif"
 cask "font-mononoki-nerd-font"
 # Free and open-source image editor
 cask "gimp"
@@ -190,6 +196,8 @@ cask "notion"
 cask "obs"
 # Knowledge base that works on top of a local folder of plain text Markdown files
 cask "obsidian"
+# Scientific and technical publishing system built on Pandoc
+cask "quarto"
 # Environment for statistical computing and graphics
 cask "r-app"
 # All-in-one bookmark manager
