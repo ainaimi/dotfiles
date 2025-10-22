@@ -8,7 +8,7 @@ osascript -e 'tell application "System Preferences" to quit'
 # defaults write com.apple.CloudSubscriptionFeatures.optIn '545129924' -bool false
 
 # Disable the sound effects on boot
-sudo nvram SystemAudioVolume=%80
+sudo nvram StartupSound=0
 
 # Set sidebar icon size to large
 defaults write NSGlobalDomain NSTableViewDefaultSizeMode -int 2
@@ -105,6 +105,13 @@ defaults write com.apple.BluetoothAudioAgent "Apple Bitpool Min (editable)" -int
 # (e.g. enable Tab in modal dialogs)
 defaults write NSGlobalDomain AppleKeyboardUIMode -int 3
 
+# shorten delay between when you hold down key and when it starts repeating
+# don't set this to small b/c then you'll repeat everything
+defaults write -g InitialKeyRepeat -int 12
+
+# Increase the key repeat rate to speed up moving around with cursor arrows
+defaults write -g KeyRepeat -int 1
+
 # Disable press-and-hold for keys in favor of key repeat
 defaults write NSGlobalDomain ApplePressAndHoldEnabled -bool false
 
@@ -136,8 +143,8 @@ sudo chflags uchg /private/var/vm/sleepimage
 ###############################################################################
 
 # Require password immediately after sleep or screen saver begins
-defaults write com.apple.screensaver askForPassword -int 1
-defaults write com.apple.screensaver askForPasswordDelay -int 0
+# defaults write com.apple.screensaver askForPassword -int 1
+# defaults write com.apple.screensaver askForPasswordDelay -int 0
 
 # Save screenshots to the screenshots DB folder
 defaults write com.apple.screencapture location -string "${HOME}/Dropbox/Screenshots"
@@ -160,7 +167,7 @@ sudo defaults write /Library/Preferences/com.apple.windowserver DisplayResolutio
 ###############################################################################
 
 # # Finder: allow quitting via ⌘ + Q; doing so will also hide desktop icons
-# defaults write com.apple.finder QuitMenuItem -bool true
+defaults write com.apple.finder QuitMenuItem -bool true
 
 # Finder: disable window animations and Get Info animations
 defaults write com.apple.finder DisableAllAnimations -bool true
@@ -191,8 +198,8 @@ defaults write com.apple.finder ShowPathbar -bool true
 # Display full POSIX path as Finder window title
 defaults write com.apple.finder _FXShowPosixPathInTitle -bool true
 
-# Keep folders on top when sorting by name
-defaults write com.apple.finder _FXSortFoldersFirst -bool true
+# Keep folders on top when sorting by name: set to false
+defaults write com.apple.finder _FXSortFoldersFirst -bool false
 
 # When performing a search, search the current folder by default
 defaults write com.apple.finder FXDefaultSearchScope -string "SCev"
