@@ -32,6 +32,7 @@ export PREFIX="$N_PREFIX"
 
 export LDFLAGS="-L/opt/homebrew/opt/libomp/lib"
 export CPPFLAGS="-I/opt/homebrew/opt/libomp/include"
+export PATH="$HOME/bin:$PATH"
 
 # --- PATH Management ---
 typeset -U path
