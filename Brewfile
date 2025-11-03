@@ -101,6 +101,8 @@ brew "pkgconf"
 brew "nodenv"
 # Create, run, and share large language models (LLMs)
 brew "ollama"
+# AI coding agent, built for the terminal
+brew "opencode"
 # Development kit for the Java programming language
 brew "openjdk"
 # Execute binaries from Python packages in isolated environments
