@@ -45,6 +45,8 @@ brew "flux"
 brew "gcc"
 # GNU database manager
 brew "gdbm"
+# Interact with Google Gemini AI models from the command-line
+brew "gemini-cli"
 # GitHub command-line tool
 brew "gh"
 # Interpreter for PostScript and PDF
@@ -149,6 +151,10 @@ cask "anki"
 cask "bartender"
 # Utility that prevents the system from going to sleep
 cask "caffeine"
+# Terminal-based AI coding assistant
+cask "claude-code"
+# OpenAI's coding agent that runs in your terminal
+cask "codex"
 # Write, edit, and chat about your code with AI
 cask "cursor"
 # Monitors and peripherals manager
