@@ -2,7 +2,7 @@
     // The following are a aesthetic settings, largely taken from 
     // https://dev.to/andrewgeorge/minimal-vscode-ui-343e
     // goal is to get a dark, clean, minimalist version of VS Code
-    "workbench.colorTheme": "Noir Tokyo Night Black",
+    "workbench.colorTheme": "Tokyo Night",
     "workbench.sideBar.location": "right",
     "workbench.statusBar.visible": false,
     "workbench.layoutControl.type": "menu",
@@ -93,6 +93,8 @@
     "chat.commandCenter.enabled": false,
     "latex-workshop.latex.build.forceRecipeUsage": false,
     "python.defaultInterpreterPath": "/Users/ain/dev/manuscript-tools/.venv",
+    "julia.enableTelemetry": false,
+    "julia.enableCrashReporter": false,
 
     // not sure what this does, commenting out for now
     //"julia.symbolCacheDownload": true,
