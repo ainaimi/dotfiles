@@ -127,6 +127,8 @@ brew "redis"
 brew "ruby-install"
 # Safe, concurrent, practical language
 brew "rust"
+# Extremely fast Python package installer and resolver, written in Rust
+brew "uv"
 # Watch files and take action when they change
 brew "watchman"
 # JavaScript package manager
@@ -246,6 +248,7 @@ mas "Xcode", id: 497799835
 vscode "andrewberty.noir-theme-bundle"
 vscode "be5invis.vscode-custom-css"
 vscode "docker.docker"
+vscode "enkia.tokyo-night"
 vscode "james-yu.latex-workshop"
 vscode "julialang.language-julia"
 vscode "maltehei.latex-citations"
