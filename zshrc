@@ -59,6 +59,7 @@ alias bbd="brew bundle dump --force --describe"
 alias trail='<<<${(F)path}'
 alias rm=trash
 alias cd="z"  # note: overrides builtin 'cd'
+alias init-grant='bash ~/Dropbox/03\ Resources/AI_assistants/grant-templates/init-grant-project.sh'
 
 # --- Functions ---
 function mkcd() {
