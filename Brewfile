@@ -95,6 +95,8 @@ brew "mas"
 brew "mysql"
 # Ambitious Vim-fork focused on extensibility and agility
 brew "neovim"
+# Port scanning utility for large networks
+brew "nmap"
 # Package compiler and linker metadata toolkit
 brew "pkgconf"
 # Node.js version manager
@@ -105,6 +107,8 @@ brew "ollama"
 brew "opencode"
 # Development kit for the Java programming language
 brew "openjdk"
+# Swiss-army knife of markup format conversion
+brew "pandoc"
 # Execute binaries from Python packages in isolated environments
 brew "pipx"
 # Object-relational database system
