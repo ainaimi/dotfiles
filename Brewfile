@@ -218,6 +218,8 @@ cask "quarto"
 cask "r-app"
 # All-in-one bookmark manager
 cask "raindropio"
+# Email client
+cask "readdle-spark"
 # Data science software focusing on R and Python
 cask "rstudio"
 # Team communication and collaboration software
