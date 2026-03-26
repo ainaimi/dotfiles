@@ -84,3 +84,12 @@ chruby ruby-3.4.4
 
 # Set nodenv global
 nodenv global 22.17.0
+
+# >>> juliaup initialize >>>
+
+# !! Contents within this block are managed by juliaup !!
+
+path=('/Users/ain/.juliaup/bin' $path)
+export PATH
+
+# <<< juliaup initialize <<<
