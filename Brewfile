@@ -35,9 +35,7 @@ brew "dbus"
 brew "docker", link: false
 # Modern, maintained replacement for ls
 brew "eza"
-# Framework for layout and rendering of i18n text
-brew "pango"
-# Play, record, convert, and stream audio and video
+# Play, record, convert, and stream select audio and video codecs
 brew "ffmpeg"
 # Lightweight scripting language for querying databases
 brew "flux"
@@ -49,6 +47,8 @@ brew "gdbm"
 brew "gemini-cli"
 # GitHub command-line tool
 brew "gh"
+# Framework for layout and rendering of i18n text
+brew "pango"
 # Interpreter for PostScript and PDF
 brew "ghostscript"
 # Distributed revision control system
@@ -59,9 +59,7 @@ brew "git-filter-repo"
 brew "glfw"
 # User-friendly cURL replacement (command-line HTTP client)
 brew "httpie"
-# LLVM's OpenMP runtime library
-brew "libomp", link: true
-# Tools and libraries to manipulate images in many formats
+# Tools and libraries to manipulate images in select formats
 brew "imagemagick"
 # Lightweight and flexible command-line JSON processor
 brew "jq"
@@ -75,6 +73,8 @@ brew "libffi"
 brew "libgit2@1.7"
 # Implementation of the file(1) command
 brew "libmagic"
+# LLVM's OpenMP runtime library
+brew "libomp", link: true
 # YAML Parser
 brew "libyaml"
 # Next-gen compiler infrastructure
@@ -111,6 +111,8 @@ brew "openjdk"
 brew "pandoc"
 # Execute binaries from Python packages in isolated environments
 brew "pipx"
+# PDF rendering library (based on the xpdf-3.0 code base)
+brew "poppler"
 # Object-relational database system
 brew "postgresql@14"
 # Theme for zsh
@@ -228,8 +230,6 @@ cask "slack"
 cask "spotify"
 # Video game digital distribution service
 cask "steam"
-# Email client
-cask "superhuman"
 # LaTeX editor
 cask "texifier"
 # File transfer application
@@ -270,6 +270,7 @@ vscode "ms-toolsai.jupyter-renderers"
 vscode "ms-toolsai.vscode-jupyter-cell-tags"
 vscode "ms-toolsai.vscode-jupyter-slideshow"
 vscode "ms-vscode-remote.remote-containers"
+vscode "ms-vscode.makefile-tools"
 vscode "ms-vsliveshare.vsliveshare"
 vscode "rdebugger.r-debugger"
 vscode "reditorsupport.r"
