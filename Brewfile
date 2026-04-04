@@ -230,6 +230,8 @@ cask "slack"
 cask "spotify"
 # Video game digital distribution service
 cask "steam"
+# Email client
+cask "superhuman"
 # LaTeX editor
 cask "texifier"
 # File transfer application
@@ -238,6 +240,8 @@ cask "transmit"
 cask "visual-studio-code"
 # Native desktop client for WhatsApp
 cask "whatsapp"
+# Open-source markdown editor
+cask "zettlr"
 # Collect, organise, cite, and share research sources
 cask "zotero"
 mas "Drafts", id: 1435957248
@@ -277,3 +281,4 @@ vscode "reditorsupport.r"
 vscode "reditorsupport.r-syntax"
 vscode "rickaym.manim-sideview"
 vscode "yzane.markdown-pdf"
+npm "corepack"
