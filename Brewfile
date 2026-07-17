@@ -232,6 +232,8 @@ cask "spotify"
 cask "steam"
 # Email client
 cask "superhuman"
+# Messaging app with a focus on speed and security
+cask "telegram"
 # LaTeX editor
 cask "texifier"
 # File transfer application
@@ -244,6 +246,7 @@ cask "whatsapp"
 cask "zettlr"
 # Collect, organise, cite, and share research sources
 cask "zotero"
+mas "Apple Configurator", id: 1037126344
 mas "Drafts", id: 1435957248
 mas "Fantastical", id: 975937182
 mas "GarageBand", id: 682658836
