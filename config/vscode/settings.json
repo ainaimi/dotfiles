@@ -96,6 +96,8 @@
     "julia.enableTelemetry": false,
     "julia.enableCrashReporter": false,
     "jupyter.askForKernelRestart": false,
+    "claudeCode.preferredLocation": "panel",
+    "makefile.configureOnOpen": true,
 
     // not sure what this does, commenting out for now
     //"julia.symbolCacheDownload": true,
