@@ -2,17 +2,16 @@
 
 echo "\n<<< Starting Homebrew Setup >>>\n"
 
-if exists brew; then
+if command -v brew >/dev/null 2>&1; then
     echo "brew already installed, skipping ..."
 else
     echo "brew not installed, installing ..."
     /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 fi
 
-# TODO: keep watch for different '--no-quarantine' solution.
-# Currently, there is no '--no-quarantine' optioin for brew bundle
-# It's in zshrc:
-# export HOMEBREW_CASK_OPTS="--no-quarantine"
-# https://github.com/Homebrew/homebrew-bundle/issues/474
+# On a fresh machine the installer does not modify this shell's PATH
+if ! command -v brew >/dev/null 2>&1 && [ -x /opt/homebrew/bin/brew ]; then
+    eval "$(/opt/homebrew/bin/brew shellenv)"
+fi
 
 brew bundle --verbose

@@ -1,40 +1,32 @@
-echo "running the .zshrc file"
-
- # --- Instant Prompt Config (must be at the very top, no console output above this) ---
+# --- Powerlevel10k instant prompt (must stay at the very top; no console output above) ---
 typeset -g POWERLEVEL9K_INSTANT_PROMPT=quiet
 if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
-# --- Powerlevel10k Theme ---
-export ZSH="/Users/ain/.config/oh-my-zsh"
-ZSH_THEME="powerlevel10k/powerlevel10k"
+# --- History ---
+HISTFILE="$HOME/.zsh_history"
+HISTSIZE=50000
+SAVEHIST=50000
+setopt SHARE_HISTORY HIST_IGNORE_ALL_DUPS HIST_IGNORE_SPACE HIST_REDUCE_BLANKS
 
-# --- Oh My Zsh Plugins ---
-plugins=(
-  zsh-autosuggestions
-  zsh-syntax-highlighting
-  git
-  z
-)
+# --- Keybindings & completion ---
+bindkey -e
+fpath=(/opt/homebrew/share/zsh/site-functions $fpath)
+autoload -Uz compinit && compinit
 
-export ZSH_COMPDUMP=$ZSH/cache/.zcompdump-$HOST 
-source $ZSH/oh-my-zsh.sh
-
-# Load Powerlevel10k config if present
+# --- Prompt: Powerlevel10k (installed via Homebrew; config in ~/.p10k.zsh) ---
+[[ -f /opt/homebrew/share/powerlevel10k/powerlevel10k.zsh-theme ]] && \
+  source /opt/homebrew/share/powerlevel10k/powerlevel10k.zsh-theme
 [[ -f ~/.p10k.zsh ]] && source ~/.p10k.zsh
 
-# --- Environment Variables ---
-export HOMEBREW_CASK_OPTS="--no_quarantine"
+# --- Environment ---
 export NULLCMD=bat
-export N_PREFIX="$HOME/.n"
-export PREFIX="$N_PREFIX"
-
 export LDFLAGS="-L/opt/homebrew/opt/libomp/lib"
 export CPPFLAGS="-I/opt/homebrew/opt/libomp/include"
-export PATH="$HOME/bin:$PATH"
+export MANPAGER="sh -c 'col -bx | bat -l man -p'"
 
-# --- PATH Management ---
+# --- PATH ---
 typeset -U path
 path=(
   /opt/homebrew/bin
@@ -47,43 +39,42 @@ path=(
   /Library/TeX/texbin
   /Applications/iTerm.app/Contents/Resources/utilities
   "/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
+  "$HOME/bin"
   "$HOME/.local/bin"
-  "$N_PREFIX/bin"
-  "$HOME/rubyonmac"
   $path
 )
 
 # --- Aliases ---
 alias ls="eza --icons --long --header"
-alias bbd="brew bundle dump --force --describe"
 alias trail='<<<${(F)path}'
 alias rm=trash
-alias cd="z"  # note: overrides builtin 'cd'
+alias cd="z"  # zoxide; overrides builtin 'cd'
 alias init-grant='bash ~/Dropbox/03\ Resources/AI_assistants/grant-templates/init-grant-project.sh'
+
+# Brewfile drift check: dump machine state to /tmp and diff against the repo's Brewfile.
+# The Brewfile itself is edited by hand; see README.
+alias bbd='brew bundle dump --describe --force --file=/tmp/Brewfile.dump; git diff --no-index ~/dotfiles/Brewfile /tmp/Brewfile.dump'
 
 # --- Functions ---
 function mkcd() {
-   mkdir -p "$@" && cd "$_";
+  mkdir -p "$@" && cd "$_";
 }
 
-# --- Tools Config ---
-export MANPAGER="sh -c 'col -bx | bat -l man -p'"
+# --- Tool init ---
+exists nodenv && eval "$(nodenv init -)"
+exists zoxide && eval "$(zoxide init zsh)"
 
-# --- Init Scripts ---
-eval "$(nodenv init -)"
-eval "$(zoxide init zsh)"
+# --- Ruby via chruby (default version pinned in ~/.ruby-version) ---
+if [[ -f /opt/homebrew/opt/chruby/share/chruby/chruby.sh ]]; then
+  source /opt/homebrew/opt/chruby/share/chruby/chruby.sh
+  source /opt/homebrew/opt/chruby/share/chruby/auto.sh
+fi
 
-# Load zsh syntax highlighting manually if not using oh-my-zsh version
+# --- Zsh plugins (Homebrew); syntax highlighting must be sourced last ---
+[[ -f /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh ]] && \
+  source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 [[ -f /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ]] && \
   source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-
-# --- Ruby via chruby ---
-source "$(brew --prefix)/opt/chruby/share/chruby/chruby.sh"
-source "$(brew --prefix)/opt/chruby/share/chruby/auto.sh"
-chruby ruby-3.4.4
-
-# Set nodenv global
-nodenv global 22.17.0
 
 # >>> juliaup initialize >>>
 

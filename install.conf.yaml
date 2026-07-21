@@ -3,28 +3,25 @@
       relink: true
 
 - create:
-    - ~/.ssh
-    - ~/.config
-    - ~/projects
+    ~/.ssh:
+      mode: 0700
+    ~/.config:
+    ~/projects:
 
 - clean: ['~']
 
 - link:
-    ~/.dotfiles: ""
     ~/.gitconfig: git/.gitconfig
     ~/.gitignore_global: git/.gitignore_global
-    ~/.ssh/config: ssh/config
     ~/.zshrc:
     ~/.zshenv:
+    ~/.p10k.zsh: p10k.zsh
     ~/.config/bat:
         create: true
         path: config/bat
     ~/.config/rstudio:
         create: true
         path: config/rstudio
-    ~/.config/oh-my-zsh:
-        create: true
-        path: config/oh-my-zsh
     ~/Library/Application Support/Code/User/custom.css:
         create: true
         path: config/vscode/custom.css
@@ -43,8 +40,5 @@
       stdout: true
       stderr: true
     - command: ./setup_macos.zsh
-      stdout: true
-      stderr: true
-    - command: ./setup_vscode.zsh
       stdout: true
       stderr: true
