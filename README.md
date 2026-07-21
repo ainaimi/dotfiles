@@ -32,7 +32,7 @@ Personal macOS setup for an Apple Silicon Mac: [Dotbot](https://github.com/anish
 - Sign in: Dropbox, 1Password
 - Alfred: preferences live in `~/Dropbox/appdata/Alfred.alfredpreferences` (synced by Dropbox, not this repo) — on a new machine, set Alfred → Advanced → Syncing to `~/Dropbox/appdata`
 - iTerm2: Settings → General → Settings → "Load preferences from a custom folder" → `~/dotfiles/config/iterm2`
-- SSH: host-specific config (computing cluster, etc.) lives in `~/.ssh/config.local`, which is intentionally untracked — recreate it by hand or from a password manager
+- SSH: sign in to 1Password and enable its SSH agent (Settings → Developer → "Use the SSH agent") — all keys live in the vault, so a new machine needs no key files. Host-specific config (cluster hostname/username) goes in `~/.ssh/config.local`, which is intentionally untracked.
 
 ## Managing packages
 
@@ -51,6 +51,7 @@ The `Brewfile` is the source of truth — edit it by hand:
 | `Brewfile` | all software: formulae, casks, App Store apps, VS Code extensions |
 | `zshrc`, `zshenv`, `p10k.zsh` | shell configuration (linked into `~`) |
 | `git/` | git config and global ignore file |
+| `ssh/config` | portable SSH config: 1Password agent wiring + include of untracked `~/.ssh/config.local` |
 | `config/bat`, `config/rstudio`, `config/vscode` | app configs (linked) |
 | `config/iterm2` | iTerm2 settings plist (loaded via iTerm2's custom-folder setting) |
 | `setup_*.zsh` | install steps run by Dotbot's shell directive |
@@ -61,8 +62,4 @@ The `Brewfile` is the source of truth — edit it by hand:
 - The zsh setup is deliberately framework-free: powerlevel10k, zsh-autosuggestions, and zsh-syntax-highlighting are installed by Homebrew and sourced directly in `zshrc`; `zoxide` provides directory jumping (`z`, aliased to `cd`)
 - R is the official CRAN build (`r-app` cask), which RStudio detects natively and which installs precompiled CRAN binaries; the Homebrew `r` formula is intentionally not used
 - Julia is managed by `juliaup`; Python by `uv`/`pipx`/`miniforge`; Ruby by `chruby`/`ruby-install`; Node by `nodenv`
-- SSH keys and `known_hosts` are never tracked; GitHub access currently uses HTTPS + macOS keychain
-
-## TODO
-
-- [ ] Set up the 1Password SSH agent and add a tracked `ssh/config` template (`IdentityAgent` + `Include ~/.ssh/config.local`)
+- SSH keys exist only inside the 1Password SSH agent, never as files on disk; the tracked `ssh/config` just wires the agent and includes the untracked `~/.ssh/config.local`; `known_hosts` is never tracked

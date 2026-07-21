@@ -1,0 +1,9 @@
+# Portable SSH config — tracked in dotfiles. Nothing sensitive belongs in this file.
+# Host-specific/private config (cluster hostname, username, etc.) goes in
+# ~/.ssh/config.local, which is intentionally untracked.
+Include ~/.ssh/config.local
+
+# All SSH keys live in the 1Password SSH agent (1Password -> Settings -> Developer).
+# No private key files exist on disk.
+Host *
+  IdentityAgent "~/Library/Group Containers/2BUA8C4S2C.com.1password/t/agent.sock"
