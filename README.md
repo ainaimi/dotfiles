@@ -30,7 +30,7 @@ Personal macOS setup for an Apple Silicon Mac: [Dotbot](https://github.com/anish
 ## Manual steps after install
 
 - Sign in: Dropbox, 1Password
-- Alfred: restore preferences via its sync-folder setting (Alfred → Advanced → Syncing)
+- Alfred: preferences live in `~/Dropbox/appdata/Alfred.alfredpreferences` (synced by Dropbox, not this repo) — on a new machine, set Alfred → Advanced → Syncing to `~/Dropbox/appdata`
 - iTerm2: Settings → General → Settings → "Load preferences from a custom folder" → `~/dotfiles/config/iterm2`
 - SSH: host-specific config (computing cluster, etc.) lives in `~/.ssh/config.local`, which is intentionally untracked — recreate it by hand or from a password manager
 
