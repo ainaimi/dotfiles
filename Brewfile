@@ -28,6 +28,8 @@ brew "zsh-autosuggestions"
 brew "zsh-syntax-highlighting"
 
 # --- Build toolchain (R packages compile with these; gcc provides gfortran) ---
+# icu4c@76 is a mactex (cask) dependency; bundle cleanup doesn't track cask deps
+brew "icu4c@76"
 brew "cmake"
 brew "gcc"
 brew "libomp", link: true
