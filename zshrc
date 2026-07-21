@@ -26,6 +26,12 @@ export LDFLAGS="-L/opt/homebrew/opt/libomp/lib"
 export CPPFLAGS="-I/opt/homebrew/opt/libomp/include"
 export MANPAGER="sh -c 'col -bx | bat -l man -p'"
 
+# 1Password SSH agent: ssh finds it via ssh/config's IdentityAgent, but
+# ssh-add/ssh-copy-id only look at SSH_AUTH_SOCK, so export it too.
+_1p_sock="$HOME/Library/Group Containers/2BUA8C4S2C.com.1password/t/agent.sock"
+[[ -S "$_1p_sock" ]] && export SSH_AUTH_SOCK="$_1p_sock"
+unset _1p_sock
+
 # --- PATH ---
 typeset -U path
 path=(
