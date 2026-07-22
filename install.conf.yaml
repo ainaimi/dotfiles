@@ -17,6 +17,7 @@
     ~/.zshenv:
     ~/.p10k.zsh: p10k.zsh
     ~/.ssh/config: ssh/config
+    ~/.ssh/allowed_signers: ssh/allowed_signers
     ~/.config/bat:
         create: true
         path: config/bat

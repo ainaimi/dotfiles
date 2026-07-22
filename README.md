@@ -63,3 +63,4 @@ The `Brewfile` is the source of truth — edit it by hand:
 - R is the official CRAN build (`r-app` cask), which RStudio detects natively and which installs precompiled CRAN binaries; the Homebrew `r` formula is intentionally not used
 - Julia is managed by `juliaup`; Python by `uv`/`pipx`/`miniforge`; Ruby by `chruby`/`ruby-install`; Node by `nodenv`
 - SSH keys exist only inside the 1Password SSH agent, never as files on disk; the tracked `ssh/config` just wires the agent and includes the untracked `~/.ssh/config.local`; `known_hosts` is never tracked
+- Git: all `https://github.com/` remotes are transparently rewritten to SSH (`url.insteadOf`), and commits are SSH-signed through the 1Password key (`gpg.format = ssh`, verifiers listed in the tracked `ssh/allowed_signers`)

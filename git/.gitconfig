@@ -4,6 +4,7 @@
 [user]
 	name = Ashley Isaac Naimi
 	email = 23343163+ainaimi@users.noreply.github.com
+	signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIEDgfhpWSJqGYBRSyvkeirPPYM+s1Y1PTFrYRPtXz23c
 [filter "lfs"]
 	process = git-lfs filter-process
 	required = true
@@ -15,3 +16,12 @@
 	helper = osxkeychain
 [http]
 	postBuffer = 157286400
+[url "git@github.com:"]
+	insteadOf = https://github.com/
+[gpg]
+	format = ssh
+[gpg "ssh"]
+	program = /Applications/1Password.app/Contents/MacOS/op-ssh-sign
+	allowedSignersFile = ~/.ssh/allowed_signers
+[commit]
+	gpgsign = true
