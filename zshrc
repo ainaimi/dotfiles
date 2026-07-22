@@ -66,6 +66,27 @@ function mkcd() {
   mkdir -p "$@" && cd "$_";
 }
 
+# One-command system update: Homebrew (formulae + casks), orphan/dep cleanup,
+# App Store apps, and Julia. Self-updating apps (Chrome, Slack, …) are skipped
+# by design; VS Code extensions and R packages update through their own apps.
+function update() {
+  echo "==> brew upgrade"
+  brew upgrade
+  echo "==> brew autoremove"
+  brew autoremove
+  echo "==> brew cleanup"
+  brew cleanup
+  if exists mas; then
+    echo "==> mas upgrade (App Store apps)"
+    mas upgrade
+  fi
+  if exists juliaup; then
+    echo "==> juliaup update"
+    juliaup update
+  fi
+  echo "==> done — run 'bbd' occasionally to check for undeclared installs"
+}
+
 # --- Tool init ---
 exists nodenv && eval "$(nodenv init -)"
 exists zoxide && eval "$(zoxide init zsh)"
