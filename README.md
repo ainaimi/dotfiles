@@ -22,7 +22,7 @@ Personal macOS setup for an Apple Silicon Mac: [Dotbot](https://github.com/anish
 `install.sh` initializes the Dotbot submodule and runs Dotbot with `install.conf.yaml`, which:
 
 - creates `~/.ssh` (mode 0700), `~/.config`, `~/projects`
-- links `~/.zshrc`, `~/.zshenv`, `~/.p10k.zsh`, git config, bat/RStudio config, and VS Code settings into this repo
+- links `~/.zshrc`, `~/.zshenv`, `~/.p10k.zsh`, git config, SSH config (`~/.ssh/config`, `~/.ssh/allowed_signers`), bat/RStudio config, and VS Code settings into this repo
 - runs `setup_homebrew.zsh` — installs Homebrew if missing, then `brew bundle` (all formulae, casks, App Store apps, and VS Code extensions come from the `Brewfile`)
 - runs `setup_zsh.zsh` — makes Homebrew's zsh the login shell; sets the default ruby (`~/.ruby-version`) and node (`nodenv`)
 - runs `setup_macos.zsh` — macOS defaults (several sudo prompts)
@@ -41,7 +41,7 @@ The `Brewfile` is the source of truth — edit it by hand:
 - **Add** a package: add its line, then `brew bundle install`
 - **Remove** a package: delete its line, then `brew bundle cleanup --force`
 - **Check drift**: `bbd` (alias) dumps the machine's actual state to `/tmp` and diffs it against the `Brewfile`, so ad-hoc installs are easy to spot and either adopt or remove
-- **Update everything**: `brew upgrade` (R updates through the `r-app` cask — the official CRAN build; no manual downloads)
+- **Update everything**: run `update` (zshrc function) — it chains `brew upgrade` → `brew autoremove` → `brew cleanup` → `mas upgrade` → `juliaup update`, skipping any tool that isn't installed. Plain `brew upgrade` works too; R updates through the `r-app` cask (the official CRAN build — no manual downloads). Self-updating apps (Chrome, Slack, VS Code, …) are intentionally left to update themselves; VS Code extensions and R packages update inside their own apps.
 
 ## Layout
 
@@ -51,7 +51,7 @@ The `Brewfile` is the source of truth — edit it by hand:
 | `Brewfile` | all software: formulae, casks, App Store apps, VS Code extensions |
 | `zshrc`, `zshenv`, `p10k.zsh` | shell configuration (linked into `~`) |
 | `git/` | git config and global ignore file |
-| `ssh/config` | portable SSH config: 1Password agent wiring + include of untracked `~/.ssh/config.local` |
+| `ssh/` | portable SSH config (1Password agent wiring + include of untracked `~/.ssh/config.local`) and `allowed_signers` for commit-signature verification |
 | `config/bat`, `config/rstudio`, `config/vscode` | app configs (linked) |
 | `config/iterm2` | iTerm2 settings plist (loaded via iTerm2's custom-folder setting) |
 | `setup_*.zsh` | install steps run by Dotbot's shell directive |
