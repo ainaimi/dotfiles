@@ -26,12 +26,43 @@
 	<string>https://api.openai.com/v1/responses</string>
 	<key>AlternateMouseScroll</key>
 	<true/>
+	<key>ClaudeCodeTriggersInstalled</key>
+	<true/>
+	<key>CodeReviewSavedPrompts</key>
+	<data>
+	W3sidXVpZCI6IjZGRDIzNTE3LTBBMDEtNDRBNC1BOTY4LTZBQzE0RTJFNjE0MSIsInRl
+	eHQiOiJSZXZpZXcgdGhlIHBlbmRpbmcgY2hhbmdlcyBpbiB0aGlzIHJlcG8uIEZsYWcg
+	aXNzdWVzIGEgY2FyZWZ1bCBtYWludGFpbmVyIHdvdWxkIGJsb2NrIG9uIGJlZm9yZSBt
+	ZXJnZSwgaW4gcm91Z2hseSB0aGlzIG9yZGVyOlxuICAxLiBDb3JyZWN0bmVzcyDigJQg
+	bG9naWMgZXJyb3JzLCBicm9rZW4gaW52YXJpYW50cywgbWlzc2VkIGVkZ2UgY2FzZXMs
+	IG9mZi1ieS1vbmUsIHJhY2VzLCBsaWZldGltZVwvbWVtb3J5IGJ1Z3MsIGVycm9yIHBh
+	dGhzIHRoYXQgc3dhbGxvdyBmYWlsdXJlcy5cbiAgMi4gU2VjdXJpdHkg4oCUIGluamVj
+	dGlvbiwgYXV0aG5cL2F1dGh6IG1pc3Rha2VzLCBzZWNyZXQgaGFuZGxpbmcsIHVuc2Fm
+	ZSBkZXNlcmlhbGl6YXRpb24sIHVuc2FmZSBkZWZhdWx0cywgVE9DVE9VLlxuICAzLiBS
+	ZWxpYWJpbGl0eSAmIHBlcmZvcm1hbmNlIOKAlCBibG9ja2luZyB0aGUgd3JvbmcgdGhy
+	ZWFkLCB1bmJvdW5kZWQgcmVzb3VyY2UgdXNlLCBhY2NpZGVudGFsIE8oTsKyKSwgcmV0
+	cmllcyB3aXRob3V0IGJhY2tvZmYsIHNpbGVudCBmYWlsdXJlIHBhdGhzLlxuICA0LiBD
+	b250cmFjdCByaXNrIOKAlCBiZWhhdmlvciBjaGFuZ2VzIGNhbGxlcnMgcmVseSBvbiwg
+	c2lsZW50bHkgY2hhbmdlZCBkZWZhdWx0cywgYnJva2VuIGJhY2t3YXJkIGNvbXBhdGli
+	aWxpdHksIG1pc3NpbmcgbWlncmF0aW9ucy5cblxuRm9yIGVhY2ggZmluZGluZyBjaXRl
+	IGBmaWxlOmxpbmVgLCBleHBsYWluICp3aHkqIGl0IGlzIHdyb25nIChub3Qgd2hhdCB0
+	aGUgY29kZSBkb2VzKSwgYW5kIHByb3Bvc2UgYSBjb25jcmV0ZSBmaXggd2hlbiBvbmUg
+	aXMgb2J2aW91cy4gQmUgY2FsaWJyYXRlZDogaWYgYSBmaW5kaW5nIGlzIG5vdCBoaWdo
+	LWNvbmZpZGVuY2UsIHNheSBzbyBvciBza2lwIGl0LiBWZXJpZnkgY2xhaW1zIGFnYWlu
+	c3QgdGhlIGFjdHVhbCBjb2RlIHJhdGhlciB0aGFuIGluZmVycmluZyBmcm9tIG5hbWVz
+	LlxuXG5Ta2lwIHB1cmUgc3R5bGUsIGZvcm1hdHRpbmcsIG5hbWluZywgYW5kIGFueXRo
+	aW5nIGEgbGludGVyIG9yIENJIGFscmVhZHkgZW5mb3JjZXMuXG5cbklmIHlvdSBmaW5k
+	IG5vdGhpbmcgd29ydGggZml4aW5nLCBzYXkgc28gcGxhaW5seS4iLCJuYW1lIjoiRGVm
+	YXVsdCJ9XQ==
+	</data>
 	<key>Default Bookmark Guid</key>
 	<string>83A241ED-DB63-4ED2-BF96-C43FC18A488C</string>
 	<key>DimBackgroundWindows</key>
 	<false/>
 	<key>DisableFullscreenTransparency</key>
 	<false/>
+	<key>EnableAPIServer</key>
+	<true/>
 	<key>HapticFeedbackForEsc</key>
 	<false/>
 	<key>HideMenuBarInFullscreen</key>
@@ -411,6 +442,53 @@
 			<string>xterm-256color</string>
 			<key>Transparency</key>
 			<real>0.12547650709219837</real>
+			<key>Triggers</key>
+			<array>
+				<dict>
+					<key>action</key>
+					<string>iTermEnterWorkgroupTrigger</string>
+					<key>contentregex</key>
+					<string></string>
+					<key>disabled</key>
+					<false/>
+					<key>eventParams</key>
+					<dict>
+						<key>jobName</key>
+						<string>claude</string>
+					</dict>
+					<key>matchType</key>
+					<integer>113</integer>
+					<key>parameter</key>
+					<string>builtin.claudeCode</string>
+					<key>partial</key>
+					<false/>
+					<key>regex</key>
+					<string></string>
+				</dict>
+				<dict>
+					<key>action</key>
+					<string>iTermExitWorkgroupTrigger</string>
+					<key>contentregex</key>
+					<string></string>
+					<key>disabled</key>
+					<false/>
+					<key>eventParams</key>
+					<dict>
+						<key>jobName</key>
+						<string>claude</string>
+						<key>leaderOnly</key>
+						<true/>
+					</dict>
+					<key>matchType</key>
+					<integer>114</integer>
+					<key>parameter</key>
+					<string></string>
+					<key>partial</key>
+					<false/>
+					<key>regex</key>
+					<string></string>
+				</dict>
+			</array>
 			<key>Unlimited Scrollback</key>
 			<false/>
 			<key>Use Bold Font</key>
@@ -469,7 +547,9 @@
 	<key>ProbeForPassword</key>
 	<false/>
 	<key>PromptOnQuit</key>
-	<false/>
+	<true/>
+	<key>PromptOnQuitEvenIfThereAreNoWindows</key>
+	<true/>
 	<key>ShowFullScreenTabBar</key>
 	<true/>
 	<key>SoundForEsc</key>
@@ -482,10 +562,46 @@
 	<integer>5</integer>
 	<key>TabViewType</key>
 	<integer>1</integer>
+	<key>ToolbeltTools</key>
+	<array>
+		<string>Profiles</string>
+		<string>Session Status</string>
+	</array>
 	<key>UseBorder</key>
 	<true/>
 	<key>VisualIndicatorForEsc</key>
 	<false/>
+	<key>Workgroups</key>
+	<data>
+	W3sidW5pcXVlSWRlbnRpZmllciI6ImJ1aWx0aW4uY2xhdWRlQ29kZSIsIm5hbWUiOiJD
+	bGF1ZGUgQ29kZSIsInNlc3Npb25zIjpbeyJ1bmlxdWVJZGVudGlmaWVyIjoiYnVpbHRp
+	bi5jbGF1ZGVDb2RlLm1haW4iLCJjb21tYW5kIjoiIiwicGVyRmlsZUNvbW1hbmQiOiIi
+	LCJ1cmxTdHJpbmciOiIiLCJkaXNwbGF5TmFtZSI6IkNoYXQiLCJraW5kIjp7ImtpbmQi
+	OiJyb290In0sIm1vZGUiOiJyZWd1bGFyIiwidG9vbGJhckl0ZW1zIjpbeyJraW5kIjoi
+	bW9kZVN3aXRjaGVyIn0seyJraW5kIjoiZ2l0U3RhdHVzIn0seyJraW5kIjoiYXV0b1Jl
+	cXVlc3RSZXZpZXdXaGVuSWRsZSJ9XX0seyJ1bmlxdWVJZGVudGlmaWVyIjoiYnVpbHRp
+	bi5jbGF1ZGVDb2RlLmRpZmYiLCJraW5kIjp7ImtpbmQiOiJwZWVyIn0sIm1vZGUiOiJk
+	aWZmIiwicGVyRmlsZUNvbW1hbmQiOiJnaXQgZGlmZnRvb2wgLXkgLXggdmltZGlmZiBc
+	XChnaXRCYXNlKSAtLSBcXChmaWxlKSIsInBhcmVudElEIjoiYnVpbHRpbi5jbGF1ZGVD
+	b2RlLm1haW4iLCJjb21tYW5kIjoiZ2l0IGRpZmZ0b29sIC15IC14IHZpbWRpZmYgXFwo
+	Z2l0QmFzZSkiLCJ0b29sYmFySXRlbXMiOlt7ImtpbmQiOiJtb2RlU3dpdGNoZXIifSx7
+	ImtpbmQiOiJjaGFuZ2VkRmlsZVNlbGVjdG9yIn0seyJraW5kIjoiZ2l0QmFzZVNlbGVj
+	dG9yIn0seyJmb3J3YXJkU2hvcnRjdXQiOnsic2VyaWFsaXplZCI6IjB4ZjcwMy0weDM0
+	MDAwMC0weDdjIn0sImtpbmQiOiJuYXZpZ2F0aW9uIiwicmVsb2FkU2hvcnRjdXQiOnsi
+	c2VyaWFsaXplZCI6IjB4NzItMHgxMDAwMDAtMHhmIn0sImJhY2tTaG9ydGN1dCI6eyJz
+	ZXJpYWxpemVkIjoiMHhmNzAyLTB4MzQwMDAwLTB4N2IifX1dLCJ1cmxTdHJpbmciOiIi
+	LCJkaXNwbGF5TmFtZSI6IkRpZmYifSx7InVuaXF1ZUlkZW50aWZpZXIiOiJidWlsdGlu
+	LmNsYXVkZUNvZGUucmV2aWV3Iiwia2luZCI6eyJraW5kIjoicGVlciJ9LCJtb2RlIjoi
+	Y29kZVJldmlldyIsInBlckZpbGVDb21tYW5kIjoiIiwicGFyZW50SUQiOiJidWlsdGlu
+	LmNsYXVkZUNvZGUubWFpbiIsImNvbW1hbmQiOiJjbGF1ZGUgXFwoY29kZVJldmlld1By
+	b21wdCkgLS1hcHBlbmQtc3lzdGVtLXByb21wdC1maWxlICdcXChjb2RlUmV2aWV3U3lz
+	dGVtUHJvbXB0RmlsZSknIC0tc2V0dGluZ3MgJ1xcKGl0ZXJtMi5hcHBCdW5kbGVQYXRo
+	KVwvQ29udGVudHNcL1Jlc291cmNlc1wvY29kZS1yZXZpZXctc2V0dGluZ3MudHh0JyIs
+	InRvb2xiYXJJdGVtcyI6W3sia2luZCI6Im1vZGVTd2l0Y2hlciJ9LHsia2luZCI6InJl
+	bG9hZCIsInNob3J0Y3V0Ijp7InNlcmlhbGl6ZWQiOiIweDcyLTB4MTAwMDAwLTB4ZiJ9
+	fSx7ImtpbmQiOiJhdXRvU2VuZENsaXBwaW5nc1doZW5JZGxlIn1dLCJ1cmxTdHJpbmci
+	OiIiLCJkaXNwbGF5TmFtZSI6IkNvZGUgUmV2aWV3In1dfV0=
+	</data>
 	<key>kCPKSelectionViewPreferredModeKey</key>
 	<integer>0</integer>
 	<key>kCPKSelectionViewShowHSBTextFieldsKey</key>

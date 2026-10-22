@@ -57,13 +57,51 @@ alias rm=trash
 alias cd="z"  # zoxide; overrides builtin 'cd'
 alias init-grant='bash ~/Dropbox/03\ Resources/AI_assistants/grant-templates/init-grant-project.sh'
 
-# Brewfile drift check: dump machine state to /tmp and diff against the repo's Brewfile.
-# The Brewfile itself is edited by hand; see README.
-alias bbd='brew bundle dump --describe --force --file=/tmp/Brewfile.dump; git diff --no-index ~/dotfiles/Brewfile /tmp/Brewfile.dump'
-
 # --- Functions ---
 function mkcd() {
   mkdir -p "$@" && cd "$_";
+}
+
+# Brewfile drift check: compare what the Brewfile declares against what's installed.
+# The Brewfile is edited by hand and lists only things wanted on purpose, so the two
+# directions need different filters:
+#   missing    — declared but absent, checked against *everything* installed, so
+#                declared-but-depended-on formulae (gcc, ffmpeg, …) don't false-positive
+#   undeclared — present but unlisted, checked against `brew leaves` only, so
+#                dependencies pulled in by declared packages aren't reported as drift
+# See README.
+function bbd() {
+  local repo="$HOME/dotfiles/Brewfile" dump=/tmp/Brewfile.dump
+  [[ -r $repo ]] || { echo "bbd: cannot read $repo" >&2; return 1 }
+  brew bundle dump --force --file="$dump" || return 1
+
+  # 'brew "libomp", link: true' -> 'brew libomp'; 'mas "Xcode", id: 497799835' -> 'mas Xcode'
+  local norm='s/^([a-z]+) "([^"]+)".*/\1 \2/'
+  local kinds='^(brew|cask|mas|vscode|tap) '
+
+  local declared installed toplevel
+  declared=$(grep -E $kinds "$repo" | sed -E "$norm" | sort -u)
+  installed=$(grep -E $kinds "$dump" | sed -E "$norm" | sort -u)
+  toplevel=$({ brew leaves | sed 's/^/brew /'
+               grep -E '^(cask|mas|vscode|tap) ' "$dump" | sed -E "$norm" } | sort -u)
+
+  local missing undeclared
+  missing=$(comm -23 <(print -rl -- ${(f)declared}) <(print -rl -- ${(f)installed}))
+  undeclared=$(comm -13 <(print -rl -- ${(f)declared}) <(print -rl -- ${(f)toplevel}))
+
+  if [[ -z $missing && -z $undeclared ]]; then
+    echo "Brewfile and machine agree — no drift."
+    return 0
+  fi
+  [[ -n $missing ]] && {
+    echo "==> declared but not installed (run 'brew bundle install', or drop the line):"
+    print -rl -- ${(f)missing} | sed 's/^/    /'
+  }
+  [[ -n $undeclared ]] && {
+    echo "==> installed but undeclared (add to the Brewfile, or uninstall):"
+    print -rl -- ${(f)undeclared} | sed 's/^/    /'
+  }
+  return 1
 }
 
 # One-command system update: Homebrew (formulae + casks), orphan/dep cleanup,

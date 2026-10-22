@@ -75,26 +75,25 @@ cask "ddpm"
 cask "dropbox"
 cask "firefox"
 cask "gimp"
-cask "gitkraken"
 cask "google-chrome"
 cask "google-drive"
-cask "istat-menus"
 cask "iterm2"
 cask "keycastr"
 cask "keymapp"
 cask "libreoffice"
 cask "mactex"
+cask "microsoft-teams"
 cask "miniforge"
 cask "notion"
 cask "obs"
 cask "obsidian"
+cask "onedrive"
 cask "quarto"
 cask "r-app"
 cask "raindropio"
 cask "rstudio"
 cask "slack"
 cask "spotify"
-cask "steam"
 cask "superhuman"
 cask "telegram"
 cask "texifier"
@@ -103,6 +102,8 @@ cask "visual-studio-code"
 cask "whatsapp"
 cask "zettlr"
 cask "zotero"
+cask "claude"
+cask "chatgpt"
 
 # --- Fonts ---
 cask "font-libertinus"
@@ -125,7 +126,6 @@ mas "Magnet", id: 441258766
 mas "Numbers", id: 409203825
 mas "Pages", id: 409201541
 mas "PDF Expert", id: 1055273043
-mas "Todoist", id: 585829637
 mas "Xcode", id: 497799835
 
 # --- VS Code extensions (single source of truth; brew bundle installs these) ---

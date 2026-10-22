@@ -40,7 +40,7 @@ The `Brewfile` is the source of truth — edit it by hand:
 
 - **Add** a package: add its line, then `brew bundle install`
 - **Remove** a package: delete its line, then `brew bundle cleanup --force`
-- **Check drift**: `bbd` (alias) dumps the machine's actual state to `/tmp` and diffs it against the `Brewfile`, so ad-hoc installs are easy to spot and either adopt or remove
+- **Check drift**: `bbd` (zshrc function) compares the `Brewfile` against what's actually installed and reports both directions — declared but missing, and installed but unlisted. Dependencies pulled in by declared packages are filtered out, so anything it prints is genuine drift to either adopt or remove. Silence means the two agree.
 - **Update everything**: run `update` (zshrc function) — it chains `brew upgrade` → `brew autoremove` → `brew cleanup` → `mas upgrade` → `juliaup update`, skipping any tool that isn't installed. Plain `brew upgrade` works too; R updates through the `r-app` cask (the official CRAN build — no manual downloads). Self-updating apps (Chrome, Slack, VS Code, …) are intentionally left to update themselves; VS Code extensions and R packages update inside their own apps.
 
 ## Layout
